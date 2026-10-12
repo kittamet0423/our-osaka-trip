@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Tokyo Trip — Autumn Koyo Edition</title>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --sumi:#2b2b2e;--ai:#2e4a6b;--ai-light:#5c7d9e;--shu:#b4462f;--shu-soft:#c96a52;
+ --washi:#f7f3e9;--washi-dark:#ece5d5;--kincha:#8a7a5c;--matcha:#7d8f6e;--sora:#8fa9bf;
+ --line:#ddd3c0;--muted:#6e6558;--shadow:0 10px 30px rgba(60,50,35,.10);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}:root{padding-bottom:env(safe-area-inset-bottom,0px)}.cover{padding-top:calc(60px + env(safe-area-inset-top,0px)) !important}
+body{margin:0;color:var(--sumi);line-height:1.8;font-family:"Noto Sans Thai",system-ui,-apple-system,sans-serif;
+ background:repeating-linear-gradient(45deg,rgba(180,165,135,.025) 0 2px,transparent 2px 5px),repeating-linear-gradient(-45deg,rgba(180,165,135,.02) 0 2px,transparent 2px 6px),linear-gradient(180deg,#faf7f0,#f5f1e6);}
+.jp{font-family:"Shippori Mincho",serif}
+.wrap{max-width:1120px;margin:auto;width:100%}
+.cover{position:relative;overflow:hidden;padding:60px 7vw 54px;background:linear-gradient(165deg,#1f3550 0%,#2e4a6b 55%,#3a5a7d 100%);color:#f7f3e9}
+.cover::before{content:"";position:absolute;inset:0;opacity:.14;background-image:radial-gradient(circle at 50% 100%,transparent 0 13px,rgba(247,243,233,.9) 13px 14.5px,transparent 15px);background-size:44px 22px;background-position:0 0}
+.cover::after{content:"大阪";position:absolute;right:-2vw;top:50%;transform:translateY(-50%);font-family:"Shippori Mincho",serif;font-size:clamp(150px,26vw,330px);line-height:.85;color:rgba(247,243,233,.06);writing-mode:vertical-rl;letter-spacing:.05em;pointer-events:none}
+.cover .wrap{position:relative;z-index:2}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#d9c9a8}
+.kicker::before{content:"";width:34px;height:1px;background:var(--shu-soft)}
+h1{font-family:"Shippori Mincho",serif;font-size:clamp(34px,6vw,62px);line-height:1.12;margin:16px 0 6px;font-weight:800}
+h1 .ruby{display:block;font-size:.34em;letter-spacing:.34em;color:#c9b894;font-weight:500;margin-bottom:8px}
+h1 em{font-style:normal;color:#e8a88f}
+.lead{max-width:760px;font-size:16px;color:#cfd9e3;margin:14px 0 0}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0}
+.badge{background:rgba(247,243,233,.10);border:1px solid rgba(247,243,233,.22);border-radius:3px;padding:7px 13px;font-size:12px}
+.hero{background:rgba(247,243,233,.08);border:1px solid rgba(247,243,233,.2);border-left:4px solid var(--shu-soft);border-radius:3px;padding:20px 22px;margin:22px 0 0}
+.hero h3{margin:0 0 6px;font-size:19px;font-family:"Shippori Mincho",serif}
+.hero p{margin:0;font-size:14px;color:#dae2ea}
+.crew{background:rgba(125,143,110,.18);border:1px solid rgba(180,200,165,.3);border-radius:3px;padding:14px 18px;font-size:13px;margin-top:14px;color:#e2e9dd}
+nav{position:sticky;top:0;z-index:30;background:#2e4a6bf2;backdrop-filter:blur(10px);padding:0 5vw;display:flex;gap:0;overflow:auto;border-bottom:3px solid var(--shu)}
+nav a{text-decoration:none;white-space:nowrap;font-size:12.5px;font-weight:700;padding:13px 15px;color:#cfd9e3;border-bottom:3px solid transparent;transition:.2s}
+nav a:hover{color:#fff;background:rgba(247,243,233,.08);border-bottom-color:var(--shu-soft)}
+section{padding:56px 7vw;position:relative}
+.day:nth-of-type(even){background:linear-gradient(180deg,rgba(236,229,213,.45),rgba(236,229,213,.2))}
+.section-title{display:flex;align-items:center;gap:18px;margin-bottom:26px}
+.hanko{flex:0 0 auto;width:60px;height:60px;border-radius:6px;border:2.5px solid var(--shu);color:var(--shu);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:"Shippori Mincho",serif;background:rgba(180,70,47,.05);transform:rotate(-2deg)}
+.hanko .n{font-size:24px;font-weight:800;line-height:1}
+.hanko .d{font-size:9px;letter-spacing:1px;opacity:.75}
+.section-title h2{margin:0;font-size:27px;font-family:"Shippori Mincho",serif;font-weight:700}
+.section-title .kanji{font-family:"Shippori Mincho",serif;color:var(--kincha);font-size:15px;margin-left:8px;font-weight:500}
+.subtitle{color:var(--muted);font-size:13px;margin-top:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card,.mini{background:var(--washi);border:1px solid var(--line);border-radius:4px;padding:18px 20px;box-shadow:var(--shadow);position:relative}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--ai-light);opacity:.5}
+.mini{box-shadow:none;background:rgba(247,243,233,.6)}.mini::before{display:none}
+.card h3,.mini h3{margin:0 0 7px;font-size:15.5px;font-family:"Shippori Mincho",serif}
+.card p,.mini p{font-size:13px;color:var(--muted);margin:5px 0}
+table{width:100%;border-collapse:collapse;font-size:13px;background:var(--washi);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+th,td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left}
+th{background:var(--ai);color:#f7f3e9;font-weight:700;font-size:12px;letter-spacing:.5px}
+tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even){background:rgba(236,229,213,.35)}
+.timeline{display:grid;margin:16px 0;border-left:2px solid var(--line);padding-left:0}
+.time{display:grid;grid-template-columns:118px 1fr;gap:16px;padding:12px 0 12px 18px;border-bottom:1px dashed var(--line);position:relative}
+.time::before{content:"";position:absolute;left:-6px;top:20px;width:10px;height:10px;border-radius:50%;background:var(--washi);border:2px solid var(--ai-light)}
+.time:last-child{border-bottom:0}
+.time b{color:var(--ai);font-size:13px;font-family:"Shippori Mincho",serif;font-weight:700}
+.time div{font-size:13.5px}
+.tip,.warn,.decision{border-radius:4px;padding:15px 18px;margin:14px 0;font-size:13px;border-left:4px solid}
+.tip{background:rgba(125,143,110,.10);border-color:var(--matcha);border-top:1px solid rgba(125,143,110,.25);border-right:1px solid rgba(125,143,110,.25);border-bottom:1px solid rgba(125,143,110,.25)}
+.warn{background:rgba(180,70,47,.07);border-color:var(--shu);border-top:1px solid rgba(180,70,47,.2);border-right:1px solid rgba(180,70,47,.2);border-bottom:1px solid rgba(180,70,47,.2)}
+.decision{background:rgba(138,122,92,.09);border-color:var(--kincha);border-top:1px solid rgba(138,122,92,.25);border-right:1px solid rgba(138,122,92,.25);border-bottom:1px solid rgba(138,122,92,.25)}
+.tip b,.warn b,.decision b{display:block;margin-bottom:4px;font-family:"Shippori Mincho",serif}
+.photo{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0}
+.photo div{position:relative;overflow:hidden;min-height:108px;border-radius:4px;display:flex;align-items:flex-end;background:#c9ced8;border:1px solid var(--line)}
+.photo div svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.photo div span{position:relative;z-index:2;margin:8px;padding:4px 9px;border-radius:2px;background:rgba(31,30,28,.62);color:#f7f3e9;font-weight:700;font-size:11.5px}
+.landmark{background:var(--washi);border:1px solid var(--line);border-radius:4px;padding:20px 22px;margin:14px 0;box-shadow:var(--shadow);border-top:3px solid var(--ai)}
+.landmark h3{margin:0 0 4px;font-size:19px;font-family:"Shippori Mincho",serif}
+.landmark h3 .jpname{font-size:13px;color:var(--kincha);margin-left:7px;font-weight:500}
+.landmark p{margin:6px 0;color:var(--muted);font-size:13.5px}
+.quest{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px;margin:16px 0}
+.quest div{background:var(--washi);border:1px solid var(--line);border-radius:4px;padding:14px;text-align:center;font-size:12.5px;color:var(--muted)}
+.quest strong{display:block;font-size:23px;color:var(--shu);font-family:"Shippori Mincho",serif}
+.usjhero{background:linear-gradient(135deg,rgba(46,74,107,.08),rgba(180,70,47,.06));border:1px solid var(--line);border-left:4px solid var(--shu);border-radius:4px;padding:20px 22px;margin:16px 0}
+.usjhero h3{margin:0 0 6px;font-size:21px;font-family:"Shippori Mincho",serif}
+.usjhero p{margin:0;font-size:13.5px;color:var(--muted)}
+.money{background:var(--washi);border:1px solid var(--line);border-top:3px solid var(--kincha);border-radius:4px;padding:20px;margin:18px 0}
+.money table{border:0;background:transparent}.money th{background:transparent;color:var(--kincha);border-bottom:2px solid var(--line)}
+.money .total td{font-size:17px;font-weight:800;color:var(--ai);border-bottom:0;background:transparent}
+.checklist{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:9px;margin:14px 0 4px}
+.check{display:flex;align-items:center;gap:9px;width:100%;min-height:42px;padding:10px 12px;border-radius:3px;background:rgba(247,243,233,.85);border:1px solid var(--line);cursor:pointer;transition:.18s;user-select:none;font-size:13.5px}
+.check:hover{border-color:var(--ai-light);transform:translateX(2px)}
+.check input{width:17px;height:17px;min-width:17px;margin:0;accent-color:var(--shu)}
+.check.done{background:rgba(125,143,110,.13);border-color:rgba(125,143,110,.4);text-decoration:line-through;color:#7d8873}
+@media(max-width:640px){.checklist{grid-template-columns:1fr}}
+.infochips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 2px}
+.infochip{background:rgba(46,74,107,.07);border:1px solid rgba(46,74,107,.18);border-radius:2px;padding:5px 10px;font-size:11.5px;font-weight:600;color:var(--ai)}
+.infochip.price{background:rgba(138,122,92,.09);border-color:rgba(138,122,92,.25);color:#7a6a48}
+.infochip.warnchip{background:rgba(180,70,47,.08);border-color:rgba(180,70,47,.25);color:var(--shu)}
+.phrase{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:11px}
+.ph{background:var(--washi);border:1px solid var(--line);border-radius:4px;padding:14px 16px;border-left:3px solid var(--matcha)}
+.ph .j{font-family:"Shippori Mincho",serif;font-size:17px;color:var(--ai);font-weight:700}
+.ph .r{font-size:12px;color:var(--shu);font-weight:600;margin:2px 0}
+.ph .t{font-size:12.5px;color:var(--muted)}
+footer{background:var(--ai);color:#cfd9e3;text-align:center;padding:36px 7vw;font-size:12.5px;position:relative;border-top:4px solid var(--shu)}
+footer .jp{display:block;font-size:19px;color:#e8d9b8;margin-bottom:6px}
+@media(max-width:700px){section{padding:44px 5vw}.time{grid-template-columns:78px 1fr;gap:10px}.photo{grid-template-columns:repeat(2,1fr)}.hanko{width:50px;height:50px}.hanko .n{font-size:20px}}
+
+
+.cover::after{content:"東京"}
+.infochip{display:inline-block;background:rgba(46,74,107,.08);border:1px solid var(--line);border-radius:99px;padding:3px 11px;font-size:12px;margin:4px 6px 0 0}
+.bud input{width:120px;padding:7px 9px;border:1px solid var(--line);border-radius:3px;background:#fff;font:inherit;text-align:right}
+.bud-total{font-size:20px;font-weight:800;color:var(--ai)}
+.pbar{height:10px;border-radius:99px;background:var(--washi-dark);overflow:hidden;margin:8px 0 0}.pbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--shu-soft),var(--matcha));transition:width .4s}
+@media(max-width:560px){.time{grid-template-columns:1fr;gap:2px}}
+
+/* ===== Autumn koyo theme ===== */
+:root{--sumi:#2f2320;--ai:#8a2b1c;--ai-light:#c4623a;--shu:#c8301f;--shu-soft:#e0663f;--washi:#fff7ea;--washi-dark:#f6e4c8;--kincha:#b07a1c;--matcha:#7f8f2e;--sora:#e8a96a;--line:#ecd3b0;--muted:#7a6254;--shadow:0 10px 30px rgba(130,55,20,.15)}
+body{background:repeating-linear-gradient(45deg,rgba(200,110,40,.04) 0 2px,transparent 2px 5px),linear-gradient(180deg,#fff4e0,#ffe6c4)}
+.cover{background:linear-gradient(165deg,#4a1210 0%,#9c2a18 42%,#e2701d 100%)}
+.cover::after{content:"紅葉";color:rgba(255,236,200,.09)}
+.cover::before{opacity:.18}
+.kicker{color:#ffd9a0}.kicker::before{background:#ffb62e}
+h1 em{color:#ffc65a}.lead{color:#ffe0c0}
+.hero{border-left-color:#ffb62e;background:rgba(255,240,210,.12)}.hero p{color:#ffe9d0}
+.crew{background:rgba(255,196,80,.16);border-color:rgba(255,200,120,.35);color:#ffe9c9}
+nav{background:#5a1712f2;border-bottom-color:#ffb62e}nav a{color:#ffe3c2}nav a:hover{background:rgba(255,200,120,.14);border-bottom-color:#ffb62e}
+.day:nth-of-type(even){background:linear-gradient(180deg,rgba(255,196,120,.24),rgba(255,196,120,.06))}
+.leafrain{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.lf{position:absolute;top:-40px;background:var(--c);clip-path:polygon(50% 0,62% 28%,100% 22%,76% 52%,90% 86%,56% 72%,50% 100%,44% 72%,10% 86%,24% 52%,0 22%,38% 28%);opacity:.9;animation:lfall linear infinite}
+@keyframes lfall{to{transform:translate(70px,620px) rotate(540deg)}}
+@media(prefers-reduced-motion:reduce){.lf{animation:none;opacity:.35}}
+/* ===== 3D warp ===== */
+.wt{all:unset;cursor:pointer;display:block;background:var(--washi);border:1px solid var(--line);border-top:4px solid var(--shu-soft);border-radius:6px;padding:14px;box-shadow:var(--shadow);transition:transform .2s}
+.wt:hover{transform:translateY(-2px)}.wt:focus-visible{outline:3px solid #ffb62e}.wt.on{border-top-color:#7f8f2e;background:#f3f4e0}
+.wt .e{font-size:30px;line-height:1}.wt b{display:block;font:800 17px "Shippori Mincho",serif;margin-top:4px}.wt small{display:block;color:var(--kincha);font-weight:700}.wt .k{display:block;margin-top:6px;font-size:13px}.wt .dd{float:right;font-size:11px;color:var(--muted)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:14px}
+#w3{display:none;position:fixed;inset:0;z-index:110;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none;background:linear-gradient(#ffb36b,#ffe8c2)}
+#w3-cv{position:absolute;inset:0;width:100%;height:100%;display:block}
+.w3-top{position:absolute;left:10px;right:10px;top:calc(10px + env(safe-area-inset-top,0px));display:flex;gap:8px;align-items:center;z-index:3}
+.w3-top button{flex:none;width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.9);color:var(--sumi);font-size:16px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+#w3-t{flex:1;min-width:0;background:rgba(255,255,255,.92);border-radius:99px;padding:5px 14px;line-height:1.25;box-shadow:0 2px 8px rgba(0,0,0,.25);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+#w3-t b{font:800 15px "Shippori Mincho",serif}#w3-t small{display:block;font-size:11px;color:var(--kincha)}
+#w3-ch{position:absolute;left:0;right:0;top:calc(62px + env(safe-area-inset-top,0px));display:flex;gap:6px;overflow-x:auto;padding:4px 10px;z-index:3;touch-action:pan-x;scrollbar-width:none}
+#w3-ch::-webkit-scrollbar{display:none}
+#w3-ch button{flex:none;font:700 11.5px "Noto Sans Thai",sans-serif;border:0;border-radius:99px;padding:6px 11px;background:rgba(255,255,255,.88);color:var(--sumi);cursor:pointer;box-shadow:0 1px 5px rgba(0,0,0,.2)}
+#w3-ch button.on{background:var(--shu);color:#fff}#w3-ch button.v{background:#6f8a2e;color:#fff}
+#w3-f{position:absolute;inset:-50%;z-index:5;pointer-events:none;opacity:0;border-radius:50%;background:conic-gradient(#fff0,#ff9a4a,#fff0,#ffd23f,#fff0,#e0301e,#fff0,#ffb347,#fff0)}
+#w3-f.go{animation:w3w 1.3s ease-out}
+@keyframes w3w{0%{opacity:.95;transform:scale(.15) rotate(0)}100%{opacity:0;transform:scale(2.2) rotate(200deg)}}
+#w3-card{position:absolute;left:10px;right:10px;margin:0 auto;max-width:580px;bottom:calc(10px + env(safe-area-inset-bottom,0px));max-height:42%;overflow:auto;background:var(--washi);border:1px solid var(--line);border-top:3px solid var(--shu);border-radius:6px;padding:12px 14px;line-height:1.5;box-shadow:0 8px 24px rgba(0,0,0,.3);touch-action:pan-y;z-index:4;transition:opacity .3s}
+#w3.fly #w3-card{opacity:0;pointer-events:none}
+#w3-card p{margin:5px 0 0;font-size:13px;color:var(--muted)}#w3-card .kl{font-size:12.5px}#w3-card .nt{margin-top:8px;font-size:11px;color:var(--kincha)}
+#w3-card .bt{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+#w3-card .bt button,#w3-card .bt a{font:700 12px "Noto Sans Thai",sans-serif;padding:6px 11px;border-radius:4px;border:1px solid var(--ai);background:#fff;color:var(--ai);text-decoration:none;cursor:pointer;line-height:1.4}
+#w3-card .bt .ci{background:var(--shu);border-color:var(--shu);color:#fff}#w3-card .bt .ci.on{background:#6f8a2e;border-color:#6f8a2e}
+</style>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+<header class="cover"><div class="wrap">
+<div class="kicker">Tokyo Trip · 紅葉 Autumn Koyo Edition</div>
+<h1><span class="ruby">とうきょう りょこう</span>東京 <em>Tokyo</em> Trip</h1>
+<p class="lead"><b>ต้นพฤศจิกายน 2026 · 7 วัน (วันที่จริงยังไม่ระบุ)</b><br>ฐานพัก Tokyo · ไดร์ฟทริป Fuji–Kawaguchiko และ Nikko · Kamakura ด้วยรถไฟ</p>
+<div class="badges"><span class="badge">🚗 ขับเอง 2 วัน</span><span class="badge">🚇 ในเมืองใช้ Suica</span><span class="badge">🍁 ใบไม้เปลี่ยนสีพื้นที่สูง</span><span class="badge">🪪 IDP + ใบขับขี่ไทย</span></div>
+<div class="hero"><h3>旅の心得 — หลักคิดของทริปนี้</h3><p><b>ใช้รถเฉพาะวันทริปนอกเมือง</b> ในโตเกียวใช้รถไฟ/Suica เพราะที่จอดแพงและรถไฟสะดวกกว่า · ใบไม้ในเมืองยังไม่แดงเต็มที่ แต่ขับไปราว 2 ชม. ก็เจอฟูจิกับใบไม้สีทอง</p></div>
+<div class="crew"><b>⚠️ อ่านก่อน</b> แผนนี้เป็นการประมาณจากความรู้ทั่วไป ไม่ใช่ข้อมูลสด ก่อนวางแผนจริงควรตรวจวันที่ งานอีเวนต์ ราคา เวลาเปิด และกฎการขับรถจากแหล่งทางการ</div>
+</div></header>
+<nav><a href="#overview">Overview</a><a href="#warp">🍁 3D</a><a href="#koyo">🍁 ใบไม้</a><a href="#drive">🚗 ขับรถ</a><a href="#d1">D1</a><a href="#d2">D2</a><a href="#d3">D3</a><a href="#d4">D4 🚗</a><a href="#d5">D5 🚗</a><a href="#d6">D6</a><a href="#d7">D7</a><a href="#food">🍜 Food</a><a href="#manner">🙇 มารยาท</a><a href="#budget">💴 งบ</a><a href="#phrases">🗣️ ภาษา</a><a href="#prep">🎒 เตรียมตัว</a></nav>
+<section id="overview"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">全</span><span class="d">PLAN</span></div><div><h2>ภาพรวมทริป <span class="kanji">行程表</span></h2><div class="subtitle">7 วัน · ฐานพัก Tokyo · ขับรถ 2 วัน (D4–D5)</div></div></div><div class="grid"><div class="mini"><h3>⭐ Must-Do</h3><p>Senso-ji · Shibuya Scramble · Meiji Jingu · Kawaguchiko & Fuji · Nikko Toshogu · Kamakura Great Buddha</p></div><div class="mini"><h3>🍁 ใบไม้</h3><p>พื้นที่สูงรอบโตเกียวเริ่มสวย ส่วนในเมืองยังไม่เต็มที่</p></div><div class="mini"><h3>🍜 กิน</h3><p>Tsukiji · Shibuya · Asakusa food crawl</p></div></div><div class="money"><table><tr><th>วัน</th><th>เดินทาง</th><th>ไฮไลต์</th></tr><tr><td>D1</td><td>🚇 รถไฟ</td><td>Asakusa · Senso-ji · Skytree</td></tr><tr><td>D2</td><td>🚇 รถไฟ</td><td>Tsukiji · Ginza · Shibuya</td></tr><tr><td>D3</td><td>🚇 รถไฟ</td><td>Meiji Jingu · Harajuku · Shinjuku</td></tr><tr><td>D4</td><td>🚗 ขับเอง</td><td>Fuji · Kawaguchiko · Hoto</td></tr><tr><td>D5</td><td>🚗 ขับเอง</td><td>Nikko · Kegon Falls · Chuzenji</td></tr><tr><td>D6</td><td>🚃 รถไฟ</td><td>Kamakura · Enoshima</td></tr><tr><td>D7</td><td>🚇 รถไฟ</td><td>Ueno · Ameyoko · กลับบ้าน</td></tr></table></div><div class="card"><h3>📊 ความคืบหน้า (ทุกเช็คลิสต์)</h3><div id="pgt" style="font-size:13px;color:var(--muted)">0 / 0</div><div class="pbar"><i id="pgf"></i></div></div></div></section>
+<section id="warp"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">立体</span><span class="d">3D</span></div><div><h2>3D ใบไม้เปลี่ยนสี <span class="kanji">紅葉ワープ</span></h2><div class="subtitle">แตะสถานที่เพื่อวาร์ปเข้าฉาก 3D สีแจ้ม · ลากหมุน บีบซูม · แตะ "มาแล้ว" เพื่อเก็บ</div></div></div>
+<div class="tip"><b>🍁 อ่านก่อน</b>ฉาก 3D ใส่สีใบไม้แจ้มเต็มที่เพื่อความสวย ส่วนจำนวนใบเมเปิลข้างชื่อสถานที่คือความแจ้มจริงโดยประมาณช่วงต้นพ.ย. ต้องตรวจพยากรณ์ใบไม้ของปีนั้นอีกครั้ง</div>
+<div style="display:flex;align-items:center;gap:14px;margin:6px 0 0"><b id="wt-c" style="font:800 24px 'Shippori Mincho',serif;color:var(--shu)">0 / 0</b><div class="pbar" style="flex:1"><i id="wt-f"></i></div></div>
+<div class="tgrid" id="wt-g"></div></div></section>
+<section id="koyo"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">紅</span><span class="d">KOYO</span></div><div><h2>ใบไม้เปลี่ยนสีต้นพ.ย. <span class="kanji">紅葉</span></h2><div class="subtitle">อะไรสวยแล้ว อะไรยังไม่ถึงเวลา (ประมาณจากความรู้ทั่วไป)</div></div></div><div class="grid"><div class="card"><h3>🗻 Fuji–Kawaguchiko</h3><p>เริ่มสวยถึงใกล้พีค ขึ้นกับอากาศของปีนั้น · ตรวจพยากรณ์ใบไม้ก่อนไป</p></div><div class="card"><h3>⛩️ Nikko</h3><p>มักสวยสุดปลายตุลาคมถึงต้นพ.ย. ย่านสูงอาจเลยพีค ย่านต่ำกำลังสวย</p></div><div class="card"><h3>🏙️ ในเมืองโตเกียว</h3><p>ยังไม่แดงเต็มที่ มักถึงเต็มที่ปลายพ.ย.–ต้นธ.ค.</p></div><div class="card"><h3>🌊 Kamakura</h3><p>ใบไม้เริ่มเปลี่ยน แต่ยังไม่เต็มที่</p></div></div><div class="decision"><b>🍂 ถ้าอยากเห็นแดงเต็มเมือง</b>ให้เลื่อนทริปไปปลายพ.ย. หรือเน้น D4–D5 ให้ตรงสัปดาห์ที่พยากรณ์บอกว่าสวย</div></div></section>
+<section id="drive"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">車</span><span class="d">DRIVE</span></div><div><h2>ขับรถเองครั้งแรก <span class="kanji">運転</span></h2><div class="subtitle">เช็กลิสต์ก่อนออกจากโตเกียว (ตรวจกฎล่าสุดจากแหล่งทางการ)</div></div></div><div class="card"><h3>✅ ก่อนรับรถ</h3><div class="checklist"><label class="check"><input type="checkbox"><span>IDP ตามอนุสัญญาเจนีวา + ใบขับขี่ไทยตัวจริง 🪪</span></label><label class="check"><input type="checkbox"><span>จองรถเช่าล่วงหน้า (วัน D4 และ D5) 🚗</span></label><label class="check"><input type="checkbox"><span>ขอบัตร ETC พร้อมเครื่องกับรถเช่า 💳</span></label><label class="check"><input type="checkbox"><span>เช็กประกัน/ความรับผิดชอบกรณีเกิดเหตุ 🛡️</span></label><label class="check"><input type="checkbox"><span>ดาวน์โหลด Google Maps ออฟไลน์ 🗺️</span></label><label class="check"><input type="checkbox"><span>ไม่ดื่มแล้วขับ — ห้ามเด็ดขาด 🚫</span></label></div></div><div class="grid"><div class="card"><h3>↖️ ชิดซ้าย</h3><p>พวงมาลัยขวา เลี้ยวซ้ายสั้น เลี้ยวขวากว้าง ระวังตอนออกจากปั๊มหรือที่จอด</p></div><div class="card"><h3>💴 ทางด่วน + ETC</h3><p>ค่าทางด่วนสะสมตามระยะทาง ผ่านช่อง ETC สะดวกสุด</p></div><div class="card"><h3>🅿️ ที่จอดรถ</h3><p>ราคาสูง โดยเฉพาะในเมือง ใช้เฉพาะวันทริปนอกเมือง คืนรถก่อนค่ำ</p></div></div><div class="decision"><b>🔑 รับรถแบบไหน</b>A) เช่าแยกวัน D4 และ D5 รับ-คืนวันต่อวัน ไม่ต้องจอดข้ามคืน · B) เช่า 2 วันติด จอดที่ที่พัก ต้องเช็กค่าที่จอด</div></div></section>
+<section class="day" id="d1"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">一</span><span class="d">D1</span></div><div><h2>Asakusa <span class="kanji">浅草</span></h2><div class="subtitle">วัน 1 · ถึงโตเกียว → เก็บ Asakusa ตอนเย็น</div></div></div><div class="card"><h3>✅ Today Checklist</h3><div class="checklist"><label class="check"><input type="checkbox"><span>Land + Suica 🎫</span></label><label class="check"><input type="checkbox"><span>Check-in / ฝากกระเป๋า 🏨</span></label><label class="check"><input type="checkbox"><span>Senso-ji ⛩️</span></label><label class="check"><input type="checkbox"><span>Asakusa Dinner 🍤</span></label></div></div><div style="margin:6px 0 2px"><span class="infochip">🚉 ไม่ขับ</span><span class="infochip">🚇 Suica</span></div><div class="landmark"><h3>⛩️ Senso-ji <span class="jpname">浅草寺</span></h3><p>วัดเก่าแก่ใจกลางย่าน ประตู Kaminarimon โคมแดงยักษ์ ตอนค่ำคนน้อยกว่ากลางวันและไฟสวย</p></div><div class="landmark"><h3>🌉 Sumida River &amp; Skytree <span class="jpname">隅田川</span></h3><p>เดินริมแม่น้ำแล้วถ่ายรูป Tokyo Skytree ยามค่ำ</p></div><div class="timeline"><div class="time"><b>บ่าย</b><div>ถึง Haneda/Narita → รถไฟเข้าเมือง ซื้อหรือเติม Suica (ใช้ในมือถือได้) เช็กอินหรือฝากกระเป๋า</div></div><div class="time"><b>เย็น</b><div>Kaminarimon → Nakamise → Senso-ji ตอนไฟเปิด</div></div><div class="time"><b>ค่ำ</b><div>มื้อเย็นย่าน Asakusa (เทมปุระ/โซบะ) แล้วเดินริมแม่น้ำ Sumida</div></div><div class="time"><b>รถเช่า</b><div>วันนี้ยังไม่ขับ ในเมืองใช้รถไฟ</div></div></div><div class="tip">🍢 Nakamise มีของกินเดินกินเยอะ แต่ช่วงคนแน่นควรยืนกินข้างร้านแล้วเก็บขยะกลับ ถังขยะในเมืองมีน้อย</div></div></section>
+<section class="day" id="d2"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">二</span><span class="d">D2</span></div><div><h2>Tsukiji → Ginza → Shibuya <span class="kanji">築地・渋谷</span></h2><div class="subtitle">วัน 2 · Food crawl เช้า → ช้อปปิ้ง → Shibuya ตอนอาทิตย์ตก</div></div></div><div class="card"><h3>✅ Today Checklist</h3><div class="checklist"><label class="check"><input type="checkbox"><span>Tsukiji Outer Market 🍣</span></label><label class="check"><input type="checkbox"><span>Ginza 🛍️</span></label><label class="check"><input type="checkbox"><span>Shibuya Crossing 🚦</span></label><label class="check"><input type="checkbox"><span>Shibuya Sky 🌇 (จองล่วงหน้า)</span></label></div></div><div style="margin:6px 0 2px"><span class="infochip">🚉 ไม่ขับ</span></div><div class="landmark"><h3>🍣 Tsukiji Outer Market <span class="jpname">築地場外市場</span></h3><p>ตลาดรอบนอก ทามาโกยากิ ซูชิ ข้าวหน้าปลาดิบ ร้านหลายแห่งปิดช่วงบ่าย ไปเช้า และตรวจวันหยุดจากแหล่งล่าสุด</p></div><div class="landmark"><h3>🚦 Shibuya Scramble <span class="jpname">渋谷スクランブル交差点</span></h3><p>ทางข้ามที่คนข้ามพร้อมกันมหาศาล ถ่ายรูปจากอาคารรอบๆ ดีกว่ายืนกลางทาง</p></div><div class="timeline"><div class="time"><b>เช้า</b><div>Tsukiji กินแบบ crawl: ทามาโกยากิ → ซูชิ/ข้าวหน้าปลาดิบ → ของหวาน</div></div><div class="time"><b>สาย–บ่าย</b><div>เดิน Ginza ตามสบาย</div></div><div class="time"><b>เย็น</b><div>Shibuya ช่วงอาทิตย์ตก ขึ้นจุดชมวิวแล้วลงมาข้าม Scramble ตอนไฟเปิด</div></div><div class="time"><b>ค่ำ</b><div>มื้อเย็น Shibuya หรือซอยร้านเล็ก ตรวจที่นั่งและค่าที่นั่ง (otoshi)</div></div></div><div class="warn">🙇 Shibuya Crossing: ข้ามแล้วอย่ายืนถ่ายรูปกลางถนนหรือขวางทางคนอื่น</div></div></section>
+<section class="day" id="d3"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">三</span><span class="d">D3</span></div><div><h2>Meiji Jingu → Harajuku → Shinjuku <span class="kanji">明治神宮・新宿</span></h2><div class="subtitle">วัน 3 · ศาลเจ้ากลางป่า → Harajuku → สวน Shinjuku → ค่ำ Shinjuku</div></div></div><div class="card"><h3>✅ Today Checklist</h3><div class="checklist"><label class="check"><input type="checkbox"><span>Meiji Jingu ⛩️</span></label><label class="check"><input type="checkbox"><span>Harajuku / Omotesando 🧁</span></label><label class="check"><input type="checkbox"><span>Shinjuku Gyoen 🍂</span></label><label class="check"><input type="checkbox"><span>Shinjuku Night 🌃</span></label></div></div><div style="margin:6px 0 2px"><span class="infochip">🚉 ไม่ขับ</span></div><div class="landmark"><h3>⛩️ Meiji Jingu <span class="jpname">明治神宮</span></h3><p>ศาลเจ้ากลางป่าใหญ่กลางเมือง ต้นพ.ย. มักมีเทศกาลหรือพิธีที่ศาลเจ้า ตรวจตารางจริงก่อนไป</p></div><div class="landmark"><h3>🍂 Shinjuku Gyoen <span class="jpname">新宿御苑</span></h3><p>สวนใหญ่กลางเมือง ช่วงต้นพ.ย. มักมีงานจัดแสดงดอกเบญจมาศ (ตรวจวันและค่าเข้า) ใบไม้ในเมืองจะสวยเต็มที่ราวปลายพ.ย.–ต้นธ.ค.</p></div><div class="timeline"><div class="time"><b>เช้า</b><div>Meiji Jingu เดินเข้าทางเข้าหลัก ใช้เวลาราว 1 ชม.</div></div><div class="time"><b>สาย</b><div>Harajuku (Takeshita Street) / Omotesando</div></div><div class="time"><b>บ่าย</b><div>Shinjuku Gyoen เดินชมสวน</div></div><div class="time"><b>ค่ำ</b><div>Shinjuku: หอสังเกตการณ์ศาลาว่าการมหานคร (ตรวจเวลา) · Omoide Yokocho กิน yakitori</div></div></div><div class="tip">📸 ถ่ายรูปคนในศาลเจ้าหรือซอยร้านเล็กต้องขออนุญาตก่อน และปิดแฟลช</div></div></section>
+<section class="day" id="d4"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">四</span><span class="d">D4</span></div><div><h2>🚗 Fuji–Kawaguchiko Drive <span class="kanji">河口湖・富士山</span></h2><div class="subtitle">วัน 4 · ไดร์ฟวันเดียว ไป-กลับจากโตเกียว</div></div></div><div class="card"><h3>✅ Today Checklist</h3><div class="checklist"><label class="check"><input type="checkbox"><span>รับรถ + ETC 🚗</span></label><label class="check"><input type="checkbox"><span>Lake Kawaguchi 🗻</span></label><label class="check"><input type="checkbox"><span>Chureito / มุมวิวฟูจิ 🍁</span></label><label class="check"><input type="checkbox"><span>Hoto 🍜</span></label><label class="check"><input type="checkbox"><span>เติมน้ำมัน + คืนรถ 🔑</span></label></div></div><div style="margin:6px 0 2px"><span class="infochip">🚗 ขับเอง</span><span class="infochip">⏱️ ~2 ชม./เที่ยว (ประมาณ)</span><span class="infochip">🪪 IDP + ใบขับขี่ไทย</span></div><div class="landmark"><h3>🗻 Kawaguchiko &amp; Mt.Fuji <span class="jpname">河口湖・富士山</span></h3><p>ต้นพ.ย. ใบไม้รอบทะเลสาบเริ่มสวย (ตรวจพยากรณ์ใบไม้ของปีนั้น) ฟูจิมองชัดตอนเช้าเมื่อฟ้าโปร่ง</p></div><div class="landmark"><h3>🍜 Hoto <span class="jpname">ほうとう</span></h3><p>บะหมี่เส้นหนาในซุปมิโสะ ใส่ฟักทองและผัก เมนูท้องถิ่นแถบยามานาชิ</p></div><div class="timeline"><div class="time"><b>เช้าตรู่</b><div>รับรถ ตั้ง Google Maps ใส่บัตร ETC เช็กชิดซ้าย ออกก่อนรถติด</div></div><div class="time"><b>ราว 2 ชม.</b><div>Chuo Expressway ไปทะเลสาบ Kawaguchiko (ประมาณ ขึ้นกับรถติด)</div></div><div class="time"><b>สาย–บ่าย</b><div>ทะเลสาบ / Oishi Park / จุดชมวิวฟูจิ แล้วกิน Hoto</div></div><div class="time"><b>บ่าย</b><div>ออกก่อนมืด กลับเข้าโตเกียว เติมน้ำมันก่อนคืนรถ</div></div><div class="time"><b>เย็น</b><div>คืนรถ กินเย็นในเมือง พักผ่อน</div></div></div><div class="warn">⚠️ ขับครั้งแรกในญี่ปุ่น: ชิดซ้าย พวงมาลัยขวา ระวังจังหวะเลี้ยวขวาและวันเสาร์อาทิตย์รถติดหนัก ตรวจกฎล่าสุดจากแหล่งทางการ</div></div></section>
+<section class="day" id="d5"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">五</span><span class="d">D5</span></div><div><h2>🚗 Nikko Drive <span class="kanji">日光</span></h2><div class="subtitle">วัน 5 · ไดร์ฟวันเดียว ศาลเจ้า น้ำตก ทะเลสาบ</div></div></div><div class="card"><h3>✅ Today Checklist</h3><div class="checklist"><label class="check"><input type="checkbox"><span>รับรถ 🚗</span></label><label class="check"><input type="checkbox"><span>Nikko Toshogu ⛩️</span></label><label class="check"><input type="checkbox"><span>Kegon Falls 💦</span></label><label class="check"><input type="checkbox"><span>Lake Chuzenji 🍁</span></label><label class="check"><input type="checkbox"><span>คืนรถ 🔑</span></label></div></div><div style="margin:6px 0 2px"><span class="infochip">🚗 ขับเอง</span><span class="infochip">⏱️ ~2–2.5 ชม./เที่ยว (ประมาณ)</span></div><div class="landmark"><h3>⛩️ Nikko Toshogu <span class="jpname">日光東照宮</span></h3><p>กลุ่มศาลเจ้าแกะสลักและลงทองประณีต มรดกโลก</p></div><div class="landmark"><h3>💦 Kegon Falls &amp; Lake Chuzenji <span class="jpname">華厳の滝・中禅寺湖</span></h3><p>ปลายตุลาคมถึงต้นพ.ย. มักเป็นช่วงสวยของนิกโก้ ย่านสูงอาจผ่านพีคไปก่อน ส่วนย่านต่ำกว่ากำลังสวย (ตรวจพยากรณ์จริง)</p></div><div class="timeline"><div class="time"><b>เช้าตรู่</b><div>ออกจากโตเกียวไปนิกโก้ (ราว 2–2.5 ชม. ประมาณ)</div></div><div class="time"><b>สาย</b><div>Toshogu / Shinkyo Bridge</div></div><div class="time"><b>บ่าย</b><div>ขึ้นทาง Irohazaka ทางโค้งหลายสิบโค้ง ไป Kegon Falls และ Lake Chuzenji</div></div><div class="time"><b>ก่อนมืด</b><div>ลงเขากลับโตเกียว คืนรถ</div></div></div><div class="tip">🍁 ช่วงใบไม้สวย Irohazaka รถติดหนัก ควรออกเช้ามากและเผื่อเวลาขากลับ</div></div></section>
+<section class="day" id="d6"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">六</span><span class="d">D6</span></div><div><h2>Kamakura &amp; Enoshima <span class="kanji">鎌倉・江ノ島</span></h2><div class="subtitle">วัน 6 · ไปรถไฟ ไม่ขับ</div></div></div><div class="card"><h3>✅ Today Checklist</h3><div class="checklist"><label class="check"><input type="checkbox"><span>Great Buddha 🙏</span></label><label class="check"><input type="checkbox"><span>Hase-dera 🌿</span></label><label class="check"><input type="checkbox"><span>Komachi-dori 🍡</span></label><label class="check"><input type="checkbox"><span>Enoshima Sunset 🌅</span></label></div></div><div style="margin:6px 0 2px"><span class="infochip">🚉 ไม่ขับ</span></div><div class="landmark"><h3>🙏 Kotoku-in (Great Buddha) <span class="jpname">高徳院</span></h3><p>พระใหญ่สัมฤทธิ์กลางแจ้ง</p></div><div class="landmark"><h3>🌿 Hase-dera <span class="jpname">長谷寺</span></h3><p>วัดบนเนินมองเห็นทะเล สวนสวย ใบไม้เริ่มเปลี่ยนแต่ยังไม่เต็มที่</p></div><div class="timeline"><div class="time"><b>เช้า</b><div>รถไฟจากโตเกียวไป Kamakura ราว 1 ชม.</div></div><div class="time"><b>สาย</b><div>Great Buddha และ Hase-dera</div></div><div class="time"><b>บ่าย</b><div>Komachi-dori ของกิน</div></div><div class="time"><b>เย็น</b><div>Enoshima ชมพระอาทิตย์ตก (นั่ง Enoden)</div></div></div><div class="tip">🚃 วันนี้ไม่ใช้รถ Kamakura ถนนแคบและที่จอดแพง นั่งรถไฟสะดวกกว่า (อยากสลับเป็น Hakone ได้ ต้องเช็กเวลาขับก่อน)</div></div></section>
+<section class="day" id="d7"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">七</span><span class="d">D7</span></div><div><h2>Ueno → ซื้อของ → กลับบ้าน <span class="kanji">上野</span></h2><div class="subtitle">วัน 7 · วันเบาๆ ก่อนขึ้นเครื่อง</div></div></div><div class="card"><h3>✅ Today Checklist</h3><div class="checklist"><label class="check"><input type="checkbox"><span>Ueno Park 🌳</span></label><label class="check"><input type="checkbox"><span>Ameyoko 🛒</span></label><label class="check"><input type="checkbox"><span>เก็บของ + เช็คเอาต์ 🧳</span></label><label class="check"><input type="checkbox"><span>ไปสนามบิน ✈️</span></label></div></div><div style="margin:6px 0 2px"><span class="infochip">🚉 ไม่ขับ</span></div><div class="landmark"><h3>🌳 Ueno Park &amp; Ameyoko <span class="jpname">上野公園・アメ横</span></h3><p>สวนและพิพิธภัณฑ์ กับตลาดร้านค้าริมทางรถไฟ ซื้อของฝากสุดท้าย</p></div><div class="timeline"><div class="time"><b>เช้า</b><div>เช็คเอาต์ ฝากกระเป๋า เดิน Ueno Park</div></div><div class="time"><b>สาย–บ่าย</b><div>Ameyoko ซื้อของฝาก กินมื้อกลางวัน</div></div><div class="time"><b>บ่าย</b><div>เดินทางไปสนามบินตามเที่ยวบินจริง (เผื่อเวลา)</div></div><div class="time"><b>ก่อนบิน</b><div>ใช้ยอด Suica ให้หมด</div></div></div><div class="tip">🎫 เช็กเงื่อนไขการคืน/ใช้ยอดคงเหลือ Suica ก่อนวันกลับ</div></div></section>
+<section id="food"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">食</span><span class="d">FOOD</span></div><div><h2>Tokyo Food Crawl <span class="kanji">食べ歩き</span></h2><div class="subtitle">ย่านอาหาร Tsukiji · Shibuya · Asakusa (ยืนยันเวลาเปิดและราคาจากแหล่งล่าสุด)</div></div></div><div class="grid"><div class="card"><h3>🍣 Tsukiji</h3><p>ทามาโกยากิ ซูชิ ข้าวหน้าปลาดิบ ไปเช้า ร้านปิดช่วงบ่าย</p></div><div class="card"><h3>🚦 Shibuya</h3><p>ราเมน ซูชิสายพาน ซอยอิซากายะเล็กๆ</p></div><div class="card"><h3>⛩️ Asakusa</h3><p>เทมปุระ โซบะ เมลอนปัง ขนมโบราณ</p></div></div><div class="card"><h3>✅ Food Checklist</h3><div class="checklist"><label class="check"><input type="checkbox"><span>Tamagoyaki (Tsukiji) 🍳</span></label><label class="check"><input type="checkbox"><span>ซูชิ / ข้าวหน้าปลาดิบ 🍣</span></label><label class="check"><input type="checkbox"><span>Ramen (Shibuya/Shinjuku) 🍜</span></label><label class="check"><input type="checkbox"><span>Yakitori (Omoide Yokocho) 🍢</span></label><label class="check"><input type="checkbox"><span>Tempura / Soba (Asakusa) 🍤</span></label><label class="check"><input type="checkbox"><span>Melon pan / ขนมโบราณ 🍈</span></label><label class="check"><input type="checkbox"><span>Hoto (Kawaguchiko) 🍲</span></label><label class="check"><input type="checkbox"><span>Komachi-dori (Kamakura) 🍡</span></label></div></div><div class="warn"><b>🪤 กับดักนักท่องเที่ยว</b>ร้านที่ไม่มีราคาหน้าร้าน · ค่าที่นั่ง (otoshi) ในอิซากายะ · ตามคิวยาวเพราะรีวิว ลองดูร้านข้างเคียงก่อน</div></div></section>
+<section id="manner"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">礼</span><span class="d">MANNER</span></div><div><h2>มารยาทที่ควรรู้ <span class="kanji">マナー</span></h2><div class="subtitle">ตอนเดิน ขึ้นรถไฟ และขับรถ (Do &amp; Don't)</div></div></div><div class="grid"><div class="card"><h3>🚶 ตอนเดิน</h3><p>• ขยะเก็บกลับ ถังขยะมีน้อย<br>• กินข้างร้าน อย่ากินเดินในที่แน่น<br>• ขออนุญาตก่อนถ่ายคน<br>• อย่ายืนขวางทางข้าม Shibuya</p></div><div class="card"><h3>🚇 รถไฟ</h3><p>• ยืนชิดซ้ายบนบันไดเลื่อน (แถบ Kanto)<br>• เงียบ ไม่คุยโทรศัพท์<br>• ให้ทางผู้โดยสาร</p></div><div class="card"><h3>🚗 ขับรถ</h3><p>• ชิดซ้าย ให้ทางคนเดินข้าม<br>• จอดเฉพาะที่จอด<br>• ไม่ใช้มือถือขณะขับ<br>• ไม่ดื่มแล้วขับ</p></div></div></div></section>
+<section id="budget"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">金</span><span class="d">BUDGET</span></div><div><h2>งบและโลจิสติกส์ <span class="kanji">予算</span></h2><div class="subtitle">กรอกตัวเลขเองเมื่อยืนยันราคาแล้ว (บันทึกในเครื่อง · เยน)</div></div></div><div class="money bud"><table><tr><th>รายการ</th><th>เยน (¥)</th></tr><tr><td>ค่าเช่ารถ 2 วัน 🚗</td><td><input type="number" inputmode="numeric" min="0" placeholder="0"></td></tr><tr><td>ค่าทางด่วน (ETC) 💴</td><td><input type="number" inputmode="numeric" min="0" placeholder="0"></td></tr><tr><td>ค่าน้ำมัน ⛽</td><td><input type="number" inputmode="numeric" min="0" placeholder="0"></td></tr><tr><td>ที่จอดรถ 🅿️</td><td><input type="number" inputmode="numeric" min="0" placeholder="0"></td></tr><tr><td>ค่ารถไฟ/Suica 🚇</td><td><input type="number" inputmode="numeric" min="0" placeholder="0"></td></tr><tr><td>ค่าเข้าสถานที่ 🎟️</td><td><input type="number" inputmode="numeric" min="0" placeholder="0"></td></tr><tr><td>อาหารทั้งทริป 🍜</td><td><input type="number" inputmode="numeric" min="0" placeholder="0"></td></tr><tr><td>ที่พัก 7 วัน 🏨</td><td><input type="number" inputmode="numeric" min="0" placeholder="0"></td></tr><tr class="total"><td>รวม</td><td class="bud-total" id="bt">¥0</td></tr></table></div><div class="tip"><b>💡 ปรับจากแผน Osaka</b>จาก ICOCA/pass เป็น Suica + ETC card · เพิ่มค่าเช่ารถ ค่าทางด่วน ค่าน้ำมัน และที่จอด · ตัวเลขทุกตัวต้องยืนยันจากแหล่งล่าสุด</div></div></section>
+<section id="phrases"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">話</span><span class="d">TALK</span></div><div><h2>ภาษาที่ใช้บ่อย <span class="kanji">会話</span></h2><div class="subtitle">ตอนขับรถและท่องเที่ยว</div></div></div><div class="money"><table><tr><th>JP</th><th>Romaji</th><th>ไทย</th></tr><tr><td>ガソリンスタンドはどこですか？</td><td>Gasorin sutando wa doko desu ka?</td><td>ปั๊มน้ำมันอยู่ไหน</td></tr><tr><td>満タンでお願いします。</td><td>Mantan de onegaishimasu.</td><td>เติมเต็มถัง</td></tr><tr><td>駐車場はありますか？</td><td>Chūshajō wa arimasu ka?</td><td>มีที่จอดรถไหม</td></tr><tr><td>ETCカードを使います。</td><td>ETC kādo o tsukaimasu.</td><td>ใช้บัตร ETC</td></tr><tr><td>道に迷いました。</td><td>Michi ni mayoimashita.</td><td>หลงทาง</td></tr><tr><td>写真を撮ってもいいですか？</td><td>Shashin o totte mo ii desu ka?</td><td>ถ่ายรูปได้ไหม</td></tr></table></div></div></section>
+<section id="prep"><div class="wrap"><div class="section-title"><div class="hanko"><span class="n">備</span><span class="d">PREP</span></div><div><h2>เตรียมตัวก่อนไป <span class="kanji">持ち物</span></h2><div class="subtitle">เช็คลิสต์ + เบอร์ฉุกเฉิน</div></div></div><div class="card"><h3>📋 ต้องทำก่อนเดินทาง</h3><div class="checklist"><label class="check"><input type="checkbox"><span>IDP + ใบขับขี่ไทย 🪪</span></label><label class="check"><input type="checkbox"><span>พาสปอร์ต 🛂</span></label><label class="check"><input type="checkbox"><span>Visit Japan Web 📲</span></label><label class="check"><input type="checkbox"><span>eSIM / Pocket WiFi 📱</span></label><label class="check"><input type="checkbox"><span>Suica ในมือถือ/การ์ด 🎫</span></label><label class="check"><input type="checkbox"><span>จองรถเช่า + ETC 🚗</span></label><label class="check"><input type="checkbox"><span>ประกันเดินทาง 🏥</span></label><label class="check"><input type="checkbox"><span>เสื้อหลายชั้น (ฟูจิ/นิกโก้เย็นกว่าในเมือง) 🧥</span></label></div></div><div class="grid"><div class="card"><h3>🌡️ อากาศต้นพ.ย.</h3><p>เมืองเย็นสบาย พื้นที่สูงรอบฟูจิและนิกโก้เย็นกว่ามาก พกเสื้อกันหนาวและร่มพับ</p></div><div class="card"><h3>🏥 เบอร์ฉุกเฉิน</h3><p><b>110</b> ตำรวจ · <b>119</b> รถพยาบาล/ดับเพลิง · สถานทูตไทย +81-3-5789-2433</p></div></div></div></section>
+<footer style="text-align:center;padding:30px 7vw 50px;color:var(--muted);font-size:12.5px">Tokyo Trip · Autumn Drive Edition · ข้อมูลเป็นการประมาณ ตรวจสอบกับแหล่งทางการก่อนเดินทาง</footer>
+<script>
+(function(){
+var K='tokyo_rev1',S={};try{S=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+function save(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
+var cs=[].slice.call(document.querySelectorAll('.check input')),bi=[].slice.call(document.querySelectorAll('.bud input'));
+function prog(){var a=0;cs.forEach(function(c){if(c.checked)a++;c.closest('.check').classList.toggle('done',c.checked)});
+ document.getElementById('pgt').textContent=a+' / '+cs.length;document.getElementById('pgf').style.width=(cs.length?a/cs.length*100:0)+'%'}
+function tot(){var s=0;bi.forEach(function(i){s+=+i.value||0});document.getElementById('bt').textContent='¥'+s.toLocaleString('en-US')}
+cs.forEach(function(c,i){c.checked=!!S['c'+i];c.addEventListener('change',function(){if(c.checked)S['c'+i]=1;else delete S['c'+i];save();prog()})});
+bi.forEach(function(x,i){if(S['b'+i])x.value=S['b'+i];x.addEventListener('input',function(){S['b'+i]=x.value;save();tot()})});
+prog();tot();
+})();
+</script>
+<script>
+(function(){
+var G,AN=[],OLM,NO=0;
+var R=0xd8432f,WH=0xfdf8ef,GD=0xffc83d,BL=0x66c5f0,DK=0x2f2a33,WD=0x9a6a47,RD=0x3d4a5c,PK=[0xff7aa8,0xffd23f,0x6ad1e3,0xa98bff,0xff9f5a];
+var NT={kai:1,byo:1,uji:1,castle:1,rinku:1};
+var SKY={1:['#8fd3f4','#fff1dc'],2:['#b8e8cf','#fff6d6'],3:['#ffd0b0','#fff0e0'],4:['#c3d4ff','#ffe6ee'],5:['#7cc8ff','#eaf7ff'],6:['#ffc9d9','#e6f3ff'],n:['#232658','#8f7bd6']};
+function mesh(g,c,x,y,z,o){var m=new THREE.Mesh(g,new THREE.MeshLambertMaterial({color:c,flatShading:true}));m.position.set(x,y,z);m.castShadow=m.receiveShadow=true;if(o!==0&&!NO){var l=new THREE.Mesh(g,OLM);l.scale.setScalar(1.06);m.add(l)}G.add(m);return m}
+function bx(w,h,d,c,x,y,z,o){return mesh(new THREE.BoxGeometry(w,h,d),c,x,y+h/2,z,o)}
+function cy(r,h,c,x,y,z,r2,s){return mesh(new THREE.CylinderGeometry(r2==null?r:r2,r,h,s||16),c,x,y+h/2,z)}
+function co(r,h,c,x,y,z,s){var g=new THREE.ConeGeometry(r,h,s||4);if(!s)g.rotateY(Math.PI/4);return mesh(g,c,x,y+h/2,z)}
+function rf(w,h,c,x,y,z,d){var m=co(w*.7071,h,c,x,y,z);m.scale.z=(d||w)/w;return m}
+function sp(r,c,x,y,z,a,b,d){var m=mesh(new THREE.SphereGeometry(r,16,12),c,x,y,z);if(a)m.scale.set(a,b,d);return m}
+function to(R2,r,c,x,y,z,rx,arc){var m=mesh(new THREE.TorusGeometry(R2,r,8,36,arc),c,x,y,z);m.rotation.x=rx||0;return m}
+function sub(x,y,z,ry,f){var p=G,g=new THREE.Group();g.position.set(x,y,z);g.rotation.y=ry||0;p.add(g);G=g;f();G=p;return g}
+var MC=[0xe0301e,0xff7a1a,0xffb81c,0xc2182b,0xff9a2e,0xf2d21b];
+function maple(x,z,s,ci){sub(x,0,z,0,function(){cy(.35*s,2.2*s,0x6b4a33,0,0,0,.28*s,8);sp(1.7*s,MC[ci%6],0,3.4*s,0);sp(1.2*s,MC[(ci+1)%6],.9*s,2.9*s,.4*s);sp(1.1*s,MC[(ci+2)%6],-.8*s,3*s,-.3*s)})}
+function gink(x,z,s){sub(x,0,z,0,function(){cy(.35,2,0x6b4a33,0,0,0,.28,8);sp(1.5*(s||1),0xffd21f,0,3.6*(s||1),0,.9,1.5,.9);sp(1,0xffe35a,.6,2.8,.3)})}
+function cedar(x,z){cy(.35,2,0x6b4a33,x,0,z);co(1.7,6,0x2f6b45,x,1.5,z,7);co(1.2,4,0x3a8056,x,4.5,z,7)}
+function forest(n,r0,sd){for(var i=0;i<n;i++){var a=i*2.399+sd,r=r0+((i*7)%5)*.7,s=.85+((i*3)%4)*.13;if(i%4==3)gink(Math.cos(a)*r,Math.sin(a)*r,s);else maple(Math.cos(a)*r,Math.sin(a)*r,s,i+sd)}}
+function isl(){cy(15,1.2,0xcf8a3a,0,-1.2,0);var m=co(14.6,9,0x7a5238,0,-10.2,0,24);m.rotation.x=Math.PI;NO=1;for(var i=0;i<18;i++){var r=4+(i*5)%9;cy(1+(i%3)*.5,.07,MC[i%6],Math.cos(i*2.4)*r,0,Math.sin(i*2.4)*r)}NO=0}
+var B={
+senso:function(){[-4.2,4.2].forEach(function(x){cy(.7,5,R,x,0,2)});bx(11,.7,1.8,R,0,5,2);bx(12.6,.5,2.6,DK,0,5.7,2);rf(13.4,2.2,DK,0,6.2,2,3.6);sp(1.5,R,0,3.2,2,1,1.5,1);bx(3.4,.15,11,0xcdb99a,0,0,-5,0);bx(8,4,5,R,0,0,-10);rf(10.5,3,DK,0,4,-10,7.5);for(var t=0;t<5;t++){bx(2.4-t*.25,1.4,2.4-t*.25,R,9,t*2.2,-6);rf(3.6-t*.4,.8,DK,9,t*2.2+1.4,-6,3.6-t*.4)}for(var i=0;i<3;i++){bx(2.4,1.6,1.6,0xf5d9a6,-8.5,0,-3+i*2.6);rf(3.2,1,i%2?R:0x4aa3df,-8.5,1.6,-3+i*2.6,2.2)}forest(11,9.5,1)},
+skytree:function(){cy(2.4,8,0xdfe6ee,0,0,-3,1.6,16);cy(1.6,10,0xcfd8e4,0,8,-3,.9,16);bx(5,1.2,5,0xb8c8da,0,18,-3);cy(1.3,2.4,0xdfe6ee,0,19.2,-3,.5,12);cy(.12,5,0x9aa7b5,0,21.6,-3,.06,6);bx(30,.14,5,BL,0,0,6,0);bx(3,.4,6,0xe8e0d0,6,.3,6);forest(10,9.5,2)},
+tsukiji:function(){for(var i=0;i<4;i++){var x=-7.5+i*5;bx(4,2.4,3,0xf5d9a6,x,0,-6);rf(5,1.4,i%2?R:WH,x,2.4,-6,4);bx(3.4,.5,1.6,0xe8f4ff,x,.9,-4);sp(.45,0xff6a5a,x-.8,1.5,-4,1.6,.7,.7);sp(.4,0xffa05a,x+.7,1.5,-4,1.4,.6,.6)}bx(4,1.4,2.2,WH,-3,0,5);bx(4.4,.7,2.6,0xff7a5a,-3,1.4,5);bx(4,1.4,2.2,WH,3.2,0,5);bx(4.4,.7,2.6,0xffc15a,3.2,1.4,5);bx(.5,1.5,2.3,0x1c3b2a,3.2,0,5);gink(-11,4,1.1);gink(11,3,1.1);forest(8,10.5,3)},
+shibuya:function(){cy(9.5,.14,0x3a3a44,0,0,0);for(var i=-3;i<=3;i++){bx(.8,.06,6,WH,i*1.2,.14,0,0);bx(6,.06,.8,WH,0,.14,i*1.2,0)}var C=[0xff7aa8,0x6ad1e3,0xffd23f,0xa98bff,0xff9f5a,0x7bd48a];for(var j=0;j<6;j++){var a=j*1.047+.5,x=Math.cos(a)*12,z=Math.sin(a)*12;bx(4,6+(j*3)%5,4,C[j],x,0,z);bx(3.2,2,.2,j%2?0xffee55:0x55ffee,x*.88,4,z*.88,0)}maple(-6.5,-6.5,1,0);maple(6.5,-6.5,1,1);maple(-6.5,6.5,1,2);maple(6.5,6.5,1,3)},
+meiji:function(){[-3.6,3.6].forEach(function(x){cy(.85,8,0x4a3328,x,0,5,.7)});bx(11.4,.9,1.2,0x4a3328,0,6.6,5);bx(12.8,.7,1.7,0x2a2024,0,8.3,5);bx(3.4,.15,12,0xcdb99a,0,0,-2,0);bx(7,3.4,5,0xe8dcc0,0,0,-11);rf(9.5,3,0x3f7d55,0,3.4,-11,7);for(var i=0;i<6;i++){var x=-9+(i%3)*1.4,z=-1+Math.floor(i/3)*1.5;cy(1.1,1.5,0xd8b27a,x,0,z);cy(1.15,.3,R,x,.6,z)}forest(18,8,2)},
+gyoen:function(){cy(5.5,.16,BL,-2,0,3,5.5,28);[[-1.5,-1.5],[1.5,-1.5],[-1.5,1.5],[1.5,1.5]].forEach(function(p){cy(.2,2.4,WD,7+p[0],0,-6+p[1])});bx(4.4,.3,4.4,WD,7,2.4,-6);rf(5.4,1.6,0x3f5f4a,7,2.7,-6,5.4);var CH=[0xffd23f,0xb06bff,WH,0xff7aa8];for(var r=0;r<3;r++)for(var c=0;c<6;c++)sp(.6,CH[(r+c)%4],-9+c*1.3,.6,-8+r*1.3,1,.8,1);forest(14,9.5,4)},
+fuji:function(){co(7.5,9,0x5f7fc0,0,0,-9,24);co(3,3.6,WH,0,5.4,-9,24);co(5,5,0x7a96d0,-9,0,-8,20);cy(6,.14,BL,0,0,4,6,36);for(var i=0;i<10;i++){var a=i*.628;maple(Math.cos(a)*8,4+Math.sin(a)*8,1.1,i)}var b=sub(2,0,4,0,function(){bx(1.8,.5,.9,WH,0,.1,0);cy(.1,1,WD,0,.5,0)});AN.push(function(t){b.position.x=Math.sin(t*.4)*3})},
+chureito:function(){for(var i=0;i<14;i++)bx(4,.3,.9,0xb8b2a6,0,i*.34,5-i*.8,1);cy(6,5,0xa06a38,0,0,-8,3,16);for(var t=0;t<5;t++){bx(3-t*.35,1.5,3-t*.35,R,0,5+t*2.3,-8);rf(4.2-t*.5,.9,DK,0,6.5+t*2.3,-8,4.2-t*.5)}co(6,7,0x5f7fc0,10,0,-14,20);co(2.4,2.6,WH,10,4.4,-14,20);for(var j=0;j<7;j++){maple(-5.5,5-j*1.7,1,j);maple(5.5,5-j*1.7,1,j+3)}},
+toshogu:function(){bx(7,5,5,WH,0,0,-6);bx(7.5,.5,5.5,GD,0,5,-6);rf(8.6,2.2,DK,0,5.5,-6,6.6);[-3,3].forEach(function(x){cy(.35,5,R,x,0,-3.4)});bx(1.8,3,.4,GD,0,1,-3.4,0);bx(16,.12,4.6,BL,0,0,6,0);for(var i=-3;i<=3;i++)bx(1.3,.4,2.2,R,i*1.15,2.4*(1-i*i/12),6);cy(.35,1.4,R,-4,0,6);cy(.35,1.4,R,4,0,6);[[-6,0],[6,0],[-6,-4],[6,-4]].forEach(function(p){bx(.8,1.8,.8,0xb8b2a6,p[0],0,p[1]);rf(1.6,.8,0xa8a296,p[0],1.8,p[1],1.6)});cedar(-10,-6);cedar(10,-6);cedar(-11,-1);cedar(11,-1);forest(12,10,5)},
+kegon:function(){bx(14,11,5,0x6a6f78,0,0,-11);bx(14.4,1,5.4,0x4c8a4a,0,11,-11);var f=bx(2,10.4,.7,0xe8f6ff,0,.4,-8.2,0);cy(9,.12,BL,0,0,3,9,36);var m=sp(2,WH,0,1,-7,1.6,.6,1);AN.push(function(t){m.position.y=1+Math.sin(t*2)*.3;f.scale.x=1+Math.sin(t*6)*.06});for(var i=0;i<9;i++)maple(-11+i*2.75,-7-(i%2)*.6,1.3,i);forest(10,10.5,6)},
+buddha:function(){bx(7,.8,7,0xb8b2a6,0,0,-4);cy(3,.9,0x7a8c6a,0,.8,-4,3.4,12);co(3.4,6.5,0x6f8a74,0,1.6,-4,16);sp(1.6,0x6f8a74,0,8.4,-4);sp(.8,0x6f8a74,0,9.8,-4,1,.6,1);sp(.9,0x6f8a74,0,3.8,-2.2,1.6,.6,.8);sp(.14,DK,-.5,8.5,-2.5);sp(.14,DK,.5,8.5,-2.5);bx(3,.15,10,0xcdb99a,0,0,5,0);forest(12,9.5,2)},
+enoshima:function(){cy(14.5,.2,BL,0,0,0,14.5,40);sp(6,0x6b8f5a,0,-3,-3,1.2,.9,1);cy(1.3,7,WH,0,3.4,-3,.9,12);cy(1.4,1.2,R,0,10.4,-3,1.1,12);co(1.2,1.2,DK,0,11.6,-3,12);sp(2.4,0xffb347,-9,9,-13);cy(4,.5,0xe2c48a,-6,0,6);maple(-7,5,1.1,0);maple(-5,7,1,1);maple(-6,4.5,1.2,2);[-1.1,1.1].forEach(function(x){cy(.2,2.4,R,x+5,0,5)});bx(3,.25,.3,DK,5,2.4,5,0)},
+ueno:function(){bx(4.5,.08,18,0xffc21a,0,0,0,0);for(var i=0;i<6;i++){gink(-4.5,-9+i*3.2,1.2);gink(4.5,-9+i*3.2,1.2)}cy(2.6,.6,0xcfcfd6,0,0,3,3);cy(.4,2.4,0xcfcfd6,0,.6,3);sp(.8,0xbfeaff,0,3.3,3);maple(-9,5,1.2,0);maple(9,5,1.2,1);maple(-9,-3,1.2,3);maple(9,-3,1.2,4)}
+};
+var PL=[
+{id:'senso',jp:'浅草寺・雷門',en:'Senso-ji & Kaminarimon',d:1,e:'⛩️',k:2,h:14,ty:4,sky:['#ffb36b','#ffe8c2'],desc:'วัดเก่าแก่ใจกลางย่าน ประตู Kaminarimon โคมแดงยักษ์ ตอนค่ำไฟสวยและคนน้อยกว่ากลางวัน',tip:'ใบไม้ในเมืองยังไม่เต็มที่ ต้นพ.ย. มาเก็บบรรยากาศวัดเป็นหลัก',q:'浅草寺'},
+{id:'skytree',jp:'東京スカイツリー',en:'Tokyo Skytree & Sumida River',d:1,e:'🗼',k:2,h:25,ty:10,dm:1.35,sky:['#ff9a6a','#ffe3c0'],desc:'เดินริมแม่น้ำ Sumida แล้วถ่ายรูป Skytree ยามค่ำ',tip:'ไปช่วงอาทิตย์ตกได้ทั้งแสงทองและไฟเมือง',q:'東京スカイツリー'},
+{id:'tsukiji',jp:'築地場外市場',en:'Tsukiji Outer Market',d:2,e:'🍣',k:2,h:11,ty:3.5,sky:['#ffc27a','#fff0d2'],desc:'ตลาดรอบนอก ทามาโกยากิ ซูชิ ข้าวหน้าปลาดิบ',tip:'ร้านหลายแห่งปิดช่วงบ่าย ไปเช้า และตรวจวันหยุดจากแหล่งล่าสุด',q:'築地場外市場'},
+{id:'shibuya',jp:'渋谷スクランブル交差点',en:'Shibuya Scramble Crossing',d:2,e:'🚦',k:2,h:15,ty:4,sky:['#ff8f6a','#ffd9b8'],desc:'ทางข้ามที่คนข้ามพร้อมกันมหาศาล ถ่ายรูปจากอาคารรอบๆ ดีกว่ายืนกลางทาง',tip:'ข้ามแล้วอย่ายืนถ่ายรูปกลางถนนหรือขวางทางคนอื่น',q:'渋谷スクランブル交差点'},
+{id:'meiji',jp:'明治神宮',en:'Meiji Jingu',d:3,e:'⛩️',k:3,h:13,ty:4,sky:['#ffae5a','#fff0cc'],desc:'ศาลเจ้ากลางป่าใหญ่กลางเมือง ต้นพ.ย. มักมีเทศกาลหรือพิธี ตรวจตารางจริงก่อนไป',tip:'เดินเข้าทางเข้าหลัก ใช้เวลาราว 1 ชม. ขออนุญาตก่อนถ่ายรูปคน',q:'明治神宮'},
+{id:'gyoen',jp:'新宿御苑',en:'Shinjuku Gyoen',d:3,e:'🍂',k:3,h:11,ty:3.5,sky:['#ffc06a','#fff3d6'],desc:'สวนใหญ่กลางเมือง ช่วงต้นพ.ย. มักมีงานจัดแสดงดอกเบญจมาศ (ตรวจวันและค่าเข้า)',tip:'ใบไม้ในเมืองเต็มที่ราวปลายพ.ย.–ต้นธ.ค.',q:'新宿御苑'},
+{id:'fuji',jp:'河口湖・富士山',en:'Lake Kawaguchi & Mt. Fuji',d:4,e:'🗻',k:4,h:15,ty:4,sky:['#7cc8ff','#ffe9c8'],desc:'ใบไม้รอบทะเลสาบเริ่มสวย ฟูจิมองชัดตอนเช้าเมื่อฟ้าโปร่ง',tip:'ออกเช้าก่อนรถติด และตรวจพยากรณ์ใบไม้ของปีนั้น',q:'河口湖'},
+{id:'chureito',jp:'新倉山浅間公園 忠霊塔',en:'Chureito Pagoda',d:4,e:'🍁',k:4,h:17,ty:6,dm:1.2,sky:['#8fd0ff','#ffe3bd'],desc:'เจดีย์แดงห้าชั้นเหนือบันได มองเห็นฟูจิเป็นฉากหลัง จุดถ่ายรูปยอดนิยม',tip:'ต้องเดินขึ้นบันไดจำนวนมาก ช่วงใบไม้สวยคนเยอะ',q:'忠霊塔 新倉山浅間公園'},
+{id:'toshogu',jp:'日光東照宮',en:'Nikko Toshogu',d:5,e:'⛩️',k:5,h:14,ty:4,sky:['#ffa85a','#ffe9c4'],desc:'กลุ่มศาลเจ้าแกะสลักและลงทองประณีต มรดกโลก',tip:'ปลายตุลาคมถึงต้นพ.ย. มักเป็นช่วงสวยของนิกโก้',q:'日光東照宮'},
+{id:'kegon',jp:'華厳の滝・中禅寺湖',en:'Kegon Falls & Lake Chuzenji',d:5,e:'💦',k:4,h:17,ty:5,dm:1.15,sky:['#9ad4ff','#ffe6bf'],desc:'น้ำตกสูงจากหน้าผา และทะเลสาบบนที่สูง ขึ้นทาง Irohazaka ทางโค้งหลายสิบโค้ง',tip:'ย่านสูงอาจผ่านพีคไปก่อน ย่านต่ำกำลังสวย · Irohazaka รถติดหนักช่วงใบไม้สวย',q:'華厳の滝'},
+{id:'buddha',jp:'高徳院 鎌倉大仏',en:'Kotoku-in (Great Buddha)',d:6,e:'🙏',k:2,h:15,ty:5,sky:['#ffb87a','#fff0d8'],desc:'พระใหญ่สัมฤทธิ์กลางแจ้ง',tip:'ใบไม้ที่ Kamakura เริ่มเปลี่ยนแต่ยังไม่เต็มที่',q:'高徳院'},
+{id:'enoshima',jp:'江ノ島',en:'Enoshima',d:6,e:'🌅',k:2,h:15,ty:5,sky:['#ff7a4a','#ffd9a0'],desc:'เกาะเล็กริมทะเล ชมพระอาทิตย์ตก นั่ง Enoden ไปได้',tip:'เผื่อเวลากลับรถไฟช่วงเย็น',q:'江ノ島'},
+{id:'ueno',jp:'上野公園・アメ横',en:'Ueno Park & Ameyoko',d:7,e:'🌳',k:2,h:11,ty:3.5,sky:['#ffd070','#fff4d2'],desc:'สวนและพิพิธภัณฑ์ กับตลาดร้านค้าริมทางรถไฟ ซื้อของฝากสุดท้าย',tip:'ต้นแปะก๋วยเริ่มเหลืองบางต้น ถ้าเข้าปลายพ.ย. จะสวยกว่า',q:'上野公園'}
+];
+var ST={};try{ST=JSON.parse(localStorage.getItem('tokyo_warp')||'{}')}catch(e){ST={}}
+function sv(){try{localStorage.setItem('tokyo_warp',JSON.stringify(ST))}catch(e){}}
+function $(i){return document.getElementById(i)}
+function gp(id){return PL.filter(function(p){return p.id==id})[0]}
+function cl(v,a,b){return Math.max(a,Math.min(b,v))}
+function lv5(k){return '🍁'.repeat(k)+'<span style="opacity:.3">'+'🍁'.repeat(5-k)+'</span>'}
+function fitT(x,t,w,fam,s,maxW,y){x.font=w+' '+s+'px '+fam;while(x.measureText(t).width>maxW&&s>22){s-=4;x.font=w+' '+s+'px '+fam}x.fillText(t,x.canvas.width/2,y)}
+function tiles(){var done=PL.filter(function(p){return ST[p.id]}).length;$('wt-c').textContent=done+' / '+PL.length;$('wt-f').style.width=(done/PL.length*100)+'%';
+ $('wt-g').innerHTML=PL.map(function(p){return '<button class="wt'+(ST[p.id]?' on':'')+'" data-id="'+p.id+'"><span class="dd">Day '+p.d+'</span><span class="e">'+p.e+'</span><b>'+p.jp+'</b><small>'+p.en+'</small><span class="k">'+lv5(p.k)+(ST[p.id]?' ✓ มาแล้ว':'')+'</span></button>'}).join('')}
+var w3,wr,ws,wc,wg,wlab,lvs=[],wid='',wa={a:.7,e:.45,d:34},wtg={a:.7,e:.45,d:34,ty:3.5},wwarp=0,wtouch=0,wps={},wrun=0;
+function D0(p){return (wc.aspect<1?46:34)*(p.dm||1)}
+function rs(){var w=w3.clientWidth,h=w3.clientHeight;wr.setSize(w,h,false);wc.aspect=w/h;wc.updateProjectionMatrix()}
+function label(p){var c=document.createElement('canvas');c.width=1024;c.height=300;var x=c.getContext('2d'),ok=ST[p.id];
+ x.beginPath();x.moveTo(72,12);x.arcTo(1012,12,1012,288,60);x.arcTo(1012,288,12,288,60);x.arcTo(12,288,12,12,60);x.arcTo(12,12,1012,12,60);x.closePath();
+ x.fillStyle='rgba(255,250,240,.97)';x.fill();x.lineWidth=11;x.strokeStyle=ok?'#6f8a2e':'#d8432f';x.stroke();x.textAlign='center';x.textBaseline='middle';
+ x.fillStyle='#2f2320';fitT(x,p.jp,'800','"Shippori Mincho","Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif',124,900,112);
+ x.fillStyle=ok?'#556b1e':'#b4462f';fitT(x,(ok?'✓ ':'')+p.en,'700','"Noto Sans Thai","Helvetica Neue",Arial,sans-serif',62,900,218);
+ var s=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(c),transparent:true,depthTest:false}));s.scale.set(14,4.1,1);s.position.set(0,p.h,0);s.renderOrder=10;s.userData.y=p.h;return s}
+function labNew(){if(wlab){wg.remove(wlab);wlab.material.map.dispose();wlab.material.dispose()}wlab=label(gp(wid));wg.add(wlab)}
+function build(){
+ w3=document.createElement('div');w3.id='w3';
+ w3.innerHTML='<canvas id="w3-cv"></canvas><div class="w3-top"><button data-w="x" aria-label="ออก">✕</button><div id="w3-t"></div><button data-w="o" title="รีเซ็ตมุมกล้อง">◎</button></div><div id="w3-ch"></div><div id="w3-f"></div><div id="w3-card"></div>';
+ document.body.appendChild(w3);var cv=$('w3-cv');
+ wr=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});wr.setPixelRatio(Math.min(window.devicePixelRatio||1,2.5));wr.shadowMap.enabled=true;wr.shadowMap.type=THREE.PCFSoftShadowMap;
+ ws=new THREE.Scene();wc=new THREE.PerspectiveCamera(42,1,.1,300);
+ ws.add(new THREE.HemisphereLight(0xfff1dc,0xffb88a,1.05));
+ var dl=new THREE.DirectionalLight(0xffe2b8,.9);dl.position.set(14,26,16);dl.castShadow=true;dl.shadow.mapSize.set(2048,2048);var sc=dl.shadow.camera;sc.left=sc.bottom=-26;sc.right=sc.top=26;sc.far=90;ws.add(dl);
+ OLM=new THREE.MeshBasicMaterial({color:0x3a1f1a,side:THREE.BackSide});
+ wg=new THREE.Group();ws.add(wg);
+ var LC=[0xe0301e,0xff7a1a,0xffb81c,0xc2182b,0xf2d21b,0xff9a2e];
+ for(var i=0;i<80;i++){var m=new THREE.Mesh(new THREE.PlaneGeometry(.6,.6),new THREE.MeshBasicMaterial({color:LC[i%6],side:THREE.DoubleSide}));m.position.set((Math.random()-.5)*46,Math.random()*30-3,(Math.random()-.5)*46);m.rotation.set(Math.random()*6,Math.random()*6,Math.random()*6);m.userData.s=.03+Math.random()*.04;ws.add(m);lvs.push(m)}
+ cv.addEventListener('pointerdown',function(e){wps[e.pointerId]=[e.clientX,e.clientY];try{cv.setPointerCapture(e.pointerId)}catch(x){}wtouch=performance.now()+4000});
+ cv.addEventListener('pointermove',function(e){var q=wps[e.pointerId];if(!q||wwarp)return;var ks=Object.keys(wps);
+  if(ks.length==2){var o=wps[ks[0]==e.pointerId?ks[1]:ks[0]],d0=Math.hypot(q[0]-o[0],q[1]-o[1]),d1=Math.hypot(e.clientX-o[0],e.clientY-o[1]);if(d1>0)wa.d=cl(wa.d*d0/d1,12,90)}
+  else{wa.a-=(e.clientX-q[0])*.008;wa.e=cl(wa.e+(e.clientY-q[1])*.006,.08,1.4)}
+  wps[e.pointerId]=[e.clientX,e.clientY];wtouch=performance.now()+4000});
+ ['pointerup','pointercancel'].forEach(function(v){cv.addEventListener(v,function(e){delete wps[e.pointerId]})});
+ cv.addEventListener('wheel',function(e){e.preventDefault();wa.d=cl(wa.d*(e.deltaY>0?1.08:.92),12,90)},{passive:false});
+ w3.addEventListener('click',function(e){var t=e.target.closest('[data-w],a');if(!t)return;
+  if(t.tagName=='A'&&t.getAttribute('href').charAt(0)=='#'){close();return}
+  var s=t.dataset.w;if(!s)return;if(s=='x'){close();return}if(wwarp)return;
+  if(s=='o'){wa.a=.7;wa.e=.45;wa.d=D0(gp(wid))}
+  else if(s=='go')go(t.dataset.id);
+  else if(s=='prev'||s=='next'){var i=PL.findIndex(function(p){return p.id==wid});go(PL[(i+(s=='next'?1:-1)+PL.length)%PL.length].id)}
+  else if(s=='ci'){if(ST[wid])delete ST[wid];else{var n=new Date();ST[wid]=n.getDate()+'/'+(n.getMonth()+1)}sv();ui();labNew();tiles()}});
+ window.addEventListener('resize',function(){if(w3.style.display=='block')rs()});
+ document.addEventListener('keydown',function(e){if(e.key=='Escape'&&w3.style.display=='block')close()});
+}
+function ui(){var p=gp(wid);$('w3-t').innerHTML='<b>'+p.e+' '+p.en+'</b><small>'+p.jp+' · Day '+p.d+'</small>';
+ $('w3-card').innerHTML='<div class="kl"><b>ความแจ้มของใบไม้จริงต้นพ.ย. (ประมาณ)</b> '+lv5(p.k)+'</div><p>'+p.desc+'</p><p>💡 '+p.tip+'</p><div class="bt"><button class="ci'+(ST[wid]?' on':'')+'" data-w="ci">'+(ST[wid]?'✓ มาแล้ว · '+ST[wid]:'🍁 มาแล้ว!')+'</button><a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.q)+'" target="_blank" rel="noopener">🧭 Google Maps</a><a href="#d'+p.d+'">📖 แผน Day '+p.d+'</a><button data-w="prev">‹ ก่อนหน้า</button><button data-w="next">ถัดไป ›</button></div><div class="nt">ฉาก 3D ใส่สีแจ้มเต็มที่เพื่อความสวย ของจริงขึ้นกับปีและความสูงของพื้นที่</div>';
+ var ch=$('w3-ch');ch.innerHTML=PL.map(function(q){return '<button data-w="go" data-id="'+q.id+'" class="'+(q.id==wid?'on':ST[q.id]?'v':'')+'">'+(ST[q.id]?'✓ ':'')+'D'+q.d+' '+q.en.split(' ')[0]+(q.en.split(' ')[1]=='&'?'':' '+(q.en.split(' ')[1]||''))+'</button>'}).join('');
+ var on=ch.querySelector('.on');if(on)ch.scrollLeft=on.offsetLeft-ch.clientWidth/2+on.clientWidth/2}
+function load(id){var p=gp(id);
+ wg.children.slice().forEach(function(c){wg.remove(c);c.traverse(function(o){if(o.geometry)o.geometry.dispose();if(o.material&&o.material!==OLM){if(o.material.map)o.material.map.dispose();o.material.dispose()}})});
+ AN=[];G=wg;NO=0;isl();B[id]();wlab=null;wid=id;labNew();$('w3').style.background='linear-gradient(180deg,'+p.sky[0]+','+p.sky[1]+')'}
+function go(id){var p=gp(id);load(id);ui();wtg={a:.7,e:.45,d:D0(p),ty:p.ty};wwarp=performance.now();w3.classList.add('fly');
+ var f=$('w3-f');f.className='';void f.offsetWidth;f.className='go';if(!wrun){wrun=1;requestAnimationFrame(loop)}}
+function loop(now){
+ if(w3.style.display!='block'){wrun=0;return}requestAnimationFrame(loop);var t=now/1000;
+ if(wwarp){var u=Math.min(1,(now-wwarp)/1800),e=1-Math.pow(1-u,3);wa.a=wtg.a+(1-e)*7;wa.e=wtg.e+(1-e)*.9;wa.d=wtg.d+(1-e)*70;if(u>=1){wwarp=0;w3.classList.remove('fly')}}
+ else if(now>wtouch)wa.a+=.0018;
+ AN.forEach(function(f){f(t)});if(wlab)wlab.position.y=wlab.userData.y+Math.sin(t*1.6)*.35;
+ lvs.forEach(function(m,i){m.position.y-=m.userData.s;m.position.x+=Math.sin(t+i)*.012;m.rotation.x+=.03;m.rotation.z+=.02;if(m.position.y<-4)m.position.y=26});
+ var d=wa.d,c=Math.cos(wa.e),ty=wtg.ty;wc.position.set(Math.sin(wa.a)*c*d,ty+Math.sin(wa.e)*d,Math.cos(wa.a)*c*d);wc.lookAt(0,ty,0);wr.render(ws,wc)}
+function open(id){
+ try{if(!w3)build()}catch(e){if(w3){w3.remove();w3=null}alert('เครื่องนี้เปิด 3D ไม่ได้');return}
+ w3.style.display='block';document.body.style.overflow='hidden';rs();go(id)}
+function close(){w3.style.display='none';document.body.style.overflow='';wwarp=0;w3.classList.remove('fly')}
+tiles();
+$('wt-g').addEventListener('click',function(e){var t=e.target.closest('[data-id]');if(!t)return;if(window.THREE)open(t.dataset.id);else alert('ต้องต่ออินเทอร์เน็ตเพื่อโหลดฉาก 3D')});
+(function(){var h='',C=['#e0301e','#ff7a1a','#ffb81c','#c2182b','#f2d21b'];for(var i=0;i<20;i++)h+='<i class="lf" style="left:'+(Math.random()*100)+'%;--c:'+C[i%5]+';width:'+(12+Math.random()*14)+'px;height:'+(12+Math.random()*14)+'px;animation-duration:'+(8+Math.random()*8)+'s;animation-delay:-'+(Math.random()*14)+'s"></i>';var c=document.querySelector('.cover');if(c){var d=document.createElement('div');d.className='leafrain';d.innerHTML=h;c.insertBefore(d,c.firstChild)}})();
+
+})();
+</script>
+</body></html>
