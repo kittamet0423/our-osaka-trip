@@ -212,7 +212,53 @@ footer .jp{display:block;font-size:19px;color:#e8d9b8;margin-bottom:6px}
 .ig{display:flex;flex-wrap:wrap;gap:5px;margin:7px 0 0}.ig b{width:100%;font-size:12px;color:var(--kincha)}
 .ig button{border:1px solid var(--line);background:#fff;border-radius:99px;padding:3px 10px;font:600 11.5px "Noto Sans Thai",sans-serif;color:var(--sumi);cursor:pointer}
 .ig button small{color:var(--muted);font-weight:500;margin-left:4px}
-</style><script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+/* ===== Credit card section ===== */
+.cc-hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#fff7ea,#ffe3d6);border:1px solid var(--line);border-top:4px solid var(--shu);border-radius:10px;padding:22px 18px 18px;box-shadow:var(--shadow)}
+.cc-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap;position:relative;z-index:1}
+.cc-me{flex:none;width:136px;margin:0 auto}.cc-me svg{display:block;width:100%;animation:svb 2s ease-in-out infinite}
+.cc-bub{flex:1;min-width:250px;background:#fff;border:2px solid var(--shu);border-radius:14px;padding:14px 16px;position:relative}
+.cc-bub:before{content:"";position:absolute;left:-10px;top:38px;width:16px;height:16px;background:#fff;border-left:2px solid var(--shu);border-bottom:2px solid var(--shu);transform:rotate(45deg)}
+@media(max-width:560px){.cc-bub:before{left:50%;top:-10px;margin-left:-8px;transform:rotate(135deg)}}
+.cc-jp{font:800 clamp(19px,4.6vw,28px)/1.5 "Shippori Mincho",serif;color:var(--sumi)}
+.cc-en{margin-top:8px;font-weight:700;color:var(--shu);font-size:15px;line-height:1.5}
+.cc-th{margin-top:4px;color:var(--ai);font-size:15px;font-weight:600;line-height:1.5}
+.cc-btn{display:block;width:100%;margin-top:14px;position:relative;z-index:1;font:800 15px "Noto Sans Thai",sans-serif;padding:13px;border:0;border-radius:99px;background:var(--shu);color:#fff;cursor:pointer;box-shadow:0 4px 12px rgba(180,70,47,.35)}
+.cc-pt{position:absolute;inset:0;pointer-events:none}
+.cc-pt i{position:absolute;top:-6%;width:11px;height:8px;border-radius:80% 0 80% 0;background:#ffc2d1;opacity:.85;animation:ccp linear infinite}
+@keyframes ccp{to{transform:translate(50px,380px) rotate(540deg)}}
+.cc-coin{position:absolute;z-index:0;width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffe9a0,#e0a526);border:2px solid #b9801a;color:#8a5a00;font:800 17px/30px "Shippori Mincho",serif;text-align:center;animation:svb 2.4s ease-in-out infinite;opacity:.9}
+.cc-steps{display:grid;gap:10px;margin-top:10px}
+.cc-st{display:flex;gap:12px;align-items:flex-start;background:var(--washi);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:14px;line-height:1.55}
+.cc-st b{flex:none;width:28px;height:28px;border-radius:50%;background:var(--shu);color:#fff;display:grid;place-items:center;font-size:14px}
+.cc-st small{display:block;color:var(--kincha);font-size:12px}
+.cc-ph{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;margin-top:10px}
+.cc-ph button{all:unset;cursor:pointer;display:block;background:var(--washi);border:1px solid var(--line);border-left:4px solid var(--shu);border-radius:8px;padding:10px 12px;line-height:1.5}
+.cc-ph button b{display:block;font:800 16px "Shippori Mincho",serif;color:var(--sumi)}.cc-ph button span{display:block;font-size:12.5px;color:var(--shu);font-weight:700}.cc-ph button em{display:block;font-style:normal;font-size:12.5px;color:var(--ai)}
+#cc-full{display:none;position:fixed;inset:0;z-index:120;background:linear-gradient(160deg,#fff7ea,#ffd3bf);flex-direction:column;align-items:center;justify-content:center;padding:calc(56px + env(safe-area-inset-top,0px)) 22px calc(80px + env(safe-area-inset-bottom,0px));text-align:center;overflow:auto}
+#cc-full.show{display:flex}
+#cc-full .cc-jp{font-size:clamp(28px,8.4vw,66px)}#cc-full .cc-en{font-size:clamp(17px,4.6vw,32px);margin-top:16px}#cc-full .cc-th{font-size:clamp(17px,4.6vw,32px);margin-top:8px}
+.cc-box{max-width:900px;background:rgba(255,255,255,.88);border:3px solid var(--shu);border-radius:18px;padding:22px 20px}
+.cc-x{position:absolute;right:14px;top:calc(12px + env(safe-area-inset-top,0px));width:44px;height:44px;border:0;border-radius:50%;background:#fff;font-size:20px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.cc-n{position:absolute;left:18px;top:calc(22px + env(safe-area-inset-top,0px));font:700 14px "Noto Sans Thai",sans-serif;color:var(--shu)}
+.cc-nav{position:absolute;left:0;right:0;bottom:calc(14px + env(safe-area-inset-bottom,0px));display:flex;justify-content:center;gap:14px}
+.cc-nav button{width:54px;height:44px;border:0;border-radius:99px;background:var(--shu);color:#fff;font-size:22px;cursor:pointer}
+.cc-me2{position:absolute;left:10px;bottom:calc(8px + env(safe-area-inset-bottom,0px));width:74px;pointer-events:none}.cc-me2 svg{display:block;width:100%}
+
+/* ===== Seasonal themes ===== */
+.leafrain{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.lf{position:absolute;top:-40px;animation:lfall linear infinite;opacity:.9}
+@keyframes lfall{to{transform:translate(70px,640px) rotate(540deg)}}
+@keyframes lrise{from{transform:translate(0,0)}to{transform:translate(-30px,-680px)}}
+html[data-season="autumn"] .lf{background:var(--c);clip-path:polygon(50% 0,62% 28%,100% 22%,76% 52%,90% 86%,56% 72%,50% 100%,44% 72%,10% 86%,24% 52%,0 22%,38% 28%)}
+html[data-season="spring"] .lf{background:var(--c);border-radius:80% 0 80% 0}
+html[data-season="winter"] .lf{background:#fff;border-radius:50%;opacity:.85}
+html[data-season="summer"] .lf{top:auto;bottom:-40px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,rgba(255,255,255,.15));border:1px solid rgba(255,255,255,.55);animation-name:lrise;opacity:.8}
+@media(prefers-reduced-motion:reduce){.lf{animation:none;opacity:.3}}
+.seasons{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.seasons button{all:unset;cursor:pointer;font:700 12.5px "Noto Sans Thai",sans-serif;padding:7px 14px;border-radius:99px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);color:#fff;transition:.2s}
+.seasons button:hover{background:rgba(255,255,255,.26)}.seasons button:focus-visible{outline:3px solid #fff;outline-offset:2px}.seasons button.on{background:#fff;color:var(--shu);border-color:#fff}
+html[data-season="autumn"]{--sumi:#2f2320;--ai:#8a2b1c;--ai-light:#c4623a;--shu:#c8301f;--shu-soft:#e0663f;--washi:#fff7ea;--washi-dark:#f6e4c8;--kincha:#b07a1c;--matcha:#7f8f2e;--sora:#e8a96a;--line:#ecd3b0;--muted:#7a6254;--shadow:0 10px 30px rgba(130,55,20,.15)}html[data-season="autumn"] body{background:repeating-linear-gradient(45deg,rgba(200,110,40,.04) 0 2px,transparent 2px 5px),linear-gradient(180deg,#fff4e0,#ffe6c4)}html[data-season="autumn"] .cover{background:linear-gradient(165deg,#4a1210 0%,#9c2a18 42%,#e2701d 100%)}html[data-season="autumn"] nav{background:#5a1712f2;border-bottom-color:#ffb62e}html[data-season="autumn"] nav a:hover{border-bottom-color:#ffb62e}html[data-season="autumn"] .kicker{color:#ffd9a0}html[data-season="autumn"] .kicker::before{background:#ffb62e}html[data-season="autumn"] h1 em{color:#ffc65a}html[data-season="autumn"] .lead{color:#ffe0c0}html[data-season="autumn"] .hero{border-left-color:#ffb62e}html[data-season="autumn"] nav a{color:#ffe3c2}html[data-season="spring"]{--ai:#8a3a5c;--ai-light:#c4698a;--shu:#d1517a;--shu-soft:#e07a9c;--washi:#fff8f7;--washi-dark:#f9e6ea;--kincha:#a8774f;--matcha:#6f9a5a;--line:#f0d3da;--muted:#7a6068;--shadow:0 10px 30px rgba(160,60,100,.13)}html[data-season="spring"] body{background:linear-gradient(180deg,#fff6f6,#fdeaee)}html[data-season="spring"] .cover{background:linear-gradient(165deg,#5a2a44 0%,#b4577d 45%,#f4b6c8 100%)}html[data-season="spring"] nav{background:#6b2b4cf2;border-bottom-color:#ffb3c8}html[data-season="spring"] nav a:hover{border-bottom-color:#ffb3c8}html[data-season="spring"] h1 em{color:#ffd1dc}html[data-season="spring"] .hero{border-left-color:#ffb3c8}html[data-season="spring"] nav a{color:#ffe3ec}html[data-season="summer"]{--ai:#0f5f86;--ai-light:#4a9bbf;--shu:#e8743b;--shu-soft:#f19a68;--washi:#f7fcfc;--washi-dark:#e0f0f1;--kincha:#7a8a5c;--matcha:#2e9e6a;--line:#cfe5e8;--muted:#5d7078;--shadow:0 10px 30px rgba(10,80,110,.13)}html[data-season="summer"] body{background:linear-gradient(180deg,#f2fbfb,#e2f3f4)}html[data-season="summer"] .cover{background:linear-gradient(165deg,#0b3a5c 0%,#0f7fa6 50%,#52c7c9 100%)}html[data-season="summer"] nav{background:#0b3a5cf2;border-bottom-color:#ffd166}html[data-season="summer"] nav a:hover{border-bottom-color:#ffd166}html[data-season="summer"] h1 em{color:#ffe08a}html[data-season="summer"] .hero{border-left-color:#ffd166}html[data-season="summer"] nav a{color:#d9f3f5}html[data-season="winter"]{--ai:#2e4a6b;--ai-light:#6f93b5;--shu:#c0392b;--shu-soft:#d96a5b;--washi:#f7fafc;--washi-dark:#e3ebf3;--kincha:#7a8798;--matcha:#5f8f8a;--line:#d3dde8;--muted:#62707f;--shadow:0 10px 30px rgba(30,60,100,.13)}html[data-season="winter"] body{background:linear-gradient(180deg,#f3f7fb,#e4edf6)}html[data-season="winter"] .cover{background:linear-gradient(165deg,#0f1f33 0%,#2b4a6b 55%,#9fc3dc 100%)}html[data-season="winter"] nav{background:#1b3550f2;border-bottom-color:#b9dcff}html[data-season="winter"] nav a:hover{border-bottom-color:#b9dcff}html[data-season="winter"] h1 em{color:#cfe8ff}html[data-season="winter"] .hero{border-left-color:#b9dcff}</style><script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head><body>
 
 <header class="cover"><div class="wrap">
@@ -220,12 +266,13 @@ footer .jp{display:block;font-size:19px;color:#e8d9b8;margin-bottom:6px}
 <h1><span class="ruby">おおさか りょこう</span>大阪 <em>Osaka</em> Trip</h1>
 <p class="lead"><b>16–21 October 2026 · 六日五泊 (6 Days / 5 Nights) · 3 คน</b><br>ฐานพัก Namba · Kaiyukan → Katsuoji → Uji → Kyoto → USJ → Rinku</p>
 <div class="badges"><span class="badge">✈️ BKK → KIX · 11:30</span><span class="badge">🏨 APA Higobashi Ekimae Tower</span><span class="badge">🚉 Higobashi 1 min</span><span class="badge">🍄 USJ Main Quest</span><span class="badge">👥 3 Travelers</span></div>
+<div class="seasons" id="seasons"><button data-s="spring">🌸 ฤดูใบไม้ผลิ</button><button data-s="summer">☀️ ฤดูร้อน</button><button data-s="autumn">🍁 ฤดูใบไม้เปลี่ยนสี</button><button data-s="winter">❄️ ฤดูหนาว</button></div>
 <div class="hero"><h3>旅の心得 — หลักคิดของทริปนี้</h3><p><b>ไม่ต้องเที่ยวครบทุกอย่าง แต่ต้องเที่ยวแล้วไม่พัง</b> — เก็บ landmark สำคัญ, กินของที่อยากกิน, ถ่ายรูป, และเหลือแรงสำหรับ USJ</p></div>
 <div class="crew"><b>👥 Group Rule (3 คน)</b> ตารางนี้เป็นแผนกลางของทั้งกลุ่ม — ถ้าใครเหนื่อยก่อน ไม่ต้องลากกันไปให้ครบ checklist ตัด Optional ทิ้งได้เลย · จองร้าน/ที่นั่งเป็น <b>3 ที่</b> เสมอ</div>
 </div></header>
 
 <nav>
-<a href="#map">🗺️ แผนที่</a><a href="#hotel">🏨 Hotel</a><a href="#overview">Overview</a><a href="#d1">Day 1</a><a href="#d2">Day 2</a><a href="#d3">Day 3</a><a href="#d4">Day 4</a><a href="#d5">Day 5</a><a href="#d6">Day 6</a><a href="#food">🍢 Osaka Food</a><a href="#phrases">🗣️ ภาษา</a><a href="#manner">🙇 มารยาท</a><a href="#money">🚆 Train</a><a href="#prep">🎒 เตรียมตัว</a>
+<a href="#map">🗺️ แผนที่</a><a href="#hotel">🏨 Hotel</a><a href="#overview">Overview</a><a href="#d1">Day 1</a><a href="#d2">Day 2</a><a href="#d3">Day 3</a><a href="#d4">Day 4</a><a href="#d5">Day 5</a><a href="#d6">Day 6</a><a href="#food">🍢 Osaka Food</a><a href="#phrases">🗣️ ภาษา</a><a href="#manner">🙇 มารยาท</a><a href="#card">💳 บัตร</a><a href="#money">🚆 Train</a><a href="#prep">🎒 เตรียมตัว</a>
 </nav>
 
 <section id="map"><div class="wrap">
@@ -536,6 +583,21 @@ footer .jp{display:block;font-size:19px;color:#e8d9b8;margin-bottom:6px}
 </div>
 </div></section>
 
+<section id="card"><div class="wrap">
+<div class="section-title"><div class="hanko"><span class="n">決済</span><span class="d">CARD</span></div><div><h2>จ่ายบัตรให้คุ้ม <span class="kanji">円で決済</span></h2><div class="subtitle">ยื่นให้พนักงานดูก่อนรูดบัตร · Show this before you pay · お会計の前にご提示ください</div></div></div>
+<div class="cc-hero"><div class="cc-pt" id="cc-pt"></div><div class="cc-coin" style="right:16px;top:14px">¥</div><div class="cc-coin" style="right:58px;top:48px;animation-delay:-.8s;transform:scale(.7)">円</div>
+<div class="cc-row"><div class="cc-me" id="cc-me"><svg viewBox="0 0 90 88"><ellipse cx="32" cy="84" rx="19" ry="4" fill="rgba(0,0,0,.25)"/><rect x="10" y="46" width="15" height="20" rx="7" fill="#c96a52"/><rect x="21" y="64" width="9" height="16" rx="4.5" fill="#f3d9bd"/><rect x="34" y="64" width="9" height="16" rx="4.5" fill="#f3d9bd"/><rect x="19" y="43" width="27" height="26" rx="11" fill="#2e4a6b"/><circle cx="18" cy="56" r="5" fill="#ffe3c8"/><circle cx="47" cy="56" r="5" fill="#ffe3c8"/><circle cx="32" cy="29" r="19" fill="#ffe3c8"/><path d="M13 27c1-13 9-19 19-19s18 6 19 19c-7-7-13-9-19-9s-12 2-19 9z" fill="#3a2e2a"/><path d="M8 20c2-13 11-18 24-18s22 5 24 18c-9 4-39 4-48 0z" fill="#b4462f"/><ellipse cx="32" cy="20" rx="27" ry="4.5" fill="#c96a52"/><circle cx="25" cy="32" r="2.6" fill="#2b2b2e"/><circle cx="39" cy="32" r="2.6" fill="#2b2b2e"/><circle cx="20" cy="37" r="3.6" fill="#f4a39a" opacity=".75"/><circle cx="44" cy="37" r="3.6" fill="#f4a39a" opacity=".75"/><path d="M28 38q4 4 8 0" stroke="#2b2b2e" stroke-width="1.8" fill="none" stroke-linecap="round"/><g transform="rotate(-14 66 52)"><rect x="52" y="38" width="31" height="19" rx="3" fill="#2e4a6b" stroke="#fff" stroke-width="1"/><rect x="52" y="43" width="31" height="4" fill="#ffc83d"/><circle cx="60" cy="52" r="3" fill="#ffc83d"/><text x="72" y="54" font-size="8" fill="#ffc83d" font-weight="800">¥</text></g></svg></div><div class="cc-bub"><div class="cc-jp" id="cc-hjp"></div><div class="cc-en" id="cc-hen"></div><div class="cc-th" id="cc-hth"></div></div></div>
+<button class="cc-btn" data-cc="0">📱 เปิดเต็มจอให้ร้านค้าดู · Show full screen · 全画面で見せる</button></div>
+<div class="card"><h3>📝 ขั้นตอนตอนจ่ายบัตร <span class="jpname">お会計の流れ</span></h3><div class="cc-steps">
+<div class="cc-st"><b>1</b><div>ยื่นการ์ดข้างบนให้พนักงานดู <b style="display:inline;background:none;color:inherit;width:auto">ก่อน</b> รูดหรือแตะบัตร<small>Show the screen before you tap or insert your card · カードを出す前にご提示ください</small></div></div>
+<div class="cc-st"><b>2</b><div>ถ้าเครื่องถามสกุลเงิน ให้เลือก <b style="display:inline;background:none;color:var(--shu);width:auto">円 / JPY</b> (ไม่ใช่เงินบาทหรือดอลลาร์)<small>If the terminal asks for a currency, choose JPY, not your home currency · 通貨選択では「円」を選択</small></div></div>
+<div class="cc-st"><b>3</b><div>เช็กสลิปว่าเป็น <b style="display:inline;background:none;color:var(--shu);width:auto">¥ / JPY</b> ก่อนเซ็นหรือกดรหัส<small>Check the slip says ¥ / JPY before you sign or enter your PIN · 金額が円か確認</small></div></div>
+<div class="cc-st"><b>💡</b><div>ทำไมต้องจ่ายเป็นเยน: ถ้าเลือกสกุลเงินบ้านเรา ร้านหรือเครื่องรูดจะเป็นคนคำนวณเรตให้ ซึ่งมักแย่กว่าเรตของ Visa / Mastercard และอาจมีค่าธรรมเนียมแฝง (เรียกว่า DCC)<small>With DCC the merchant sets the exchange rate, which is often worse than the card network rate.</small></div></div>
+<div class="cc-st"><b>🎒</b><div>ก่อนไป: เช็กกับธนาคารว่าเปิดใช้บัตรต่างประเทศแล้ว จำ PIN ได้ และพกเงินสดสำรอง เพราะร้านเล็กหรือร้านดั้งเดิมบางแห่งรับเงินสดอย่างเดียว<small>Enable overseas use, remember your PIN, and carry some cash.</small></div></div>
+</div></div>
+<div class="card"><h3>🗣️ ประโยคที่ใช้บ่อย <span class="jpname">よく使うフレーズ</span></h3><div class="subtitle" style="margin:2px 0 0">แตะประโยคเพื่อเปิดเต็มจอให้พนักงานอ่าน · JP / EN / TH</div><div class="cc-ph" id="cc-ph"></div></div>
+</div></section>
+
 <section id="money"><div class="wrap">
 <div class="section-title"><div class="hanko"><span class="n">電</span><span class="d">TRAIN</span></div><div><h2>Train Cheat Sheet <span class="kanji">電車</span></h2><div class="subtitle">ล็อกจาก APA Hotel Osaka Higobashi Ekimae Tower</div></div></div>
 <table>
@@ -755,7 +817,8 @@ function rf(w,h,c,x,y,z,d){var m=co(w*.7071,h,c,x,y,z);m.scale.z=(d||w)/w;return
 function sp(r,c,x,y,z,a,b,d){var m=mesh(new THREE.SphereGeometry(r,16,12),c,x,y,z);if(a)m.scale.set(a,b,d);return m}
 function to(R2,r,c,x,y,z,rx,arc){var m=mesh(new THREE.TorusGeometry(R2,r,8,36,arc),c,x,y,z);m.rotation.x=rx||0;return m}
 function sub(x,y,z,ry,f){var p=G,g=new THREE.Group();g.position.set(x,y,z);g.rotation.y=ry||0;p.add(g);G=g;f();G=p;return g}
-function tree(x,z,k){sub(x,0,z,0,function(){cy(.35,2,0x8a5a3b,0,0,0);if(k){sp(1.6,0xffb7c5,0,3.1,0);sp(1.1,0xffc9d4,.9,2.6,.5)}else{co(1.7,2.6,0x4f9d6b,0,1.6,0,7);co(1.2,2,0x5fb37a,0,3.2,0,7)}})}
+function SE(){return window.SEAS||{a:0xffb7c5,b:0xffc9d4,g:0x8fdc8a,p:[0xffb3c6],v:.035,s:.45}}
+function tree(x,z,k){sub(x,0,z,0,function(){cy(.35,2,0x8a5a3b,0,0,0);if(k){sp(1.6,SE().a,0,3.1,0);sp(1.1,SE().b,.9,2.6,.5)}else{co(1.7,2.6,0x4f9d6b,0,1.6,0,7);co(1.2,2,0x5fb37a,0,3.2,0,7)}})}
 function lan(x,y,z){sp(.35,0xe0412f,x,y,z,1,1.2,1);cy(.08,.4,DK,x,y+.4,z)}
 function tori(x,z,ry){sub(x,0,z,ry,function(){cy(.22,3.4,R,-1.3,0,0);cy(.22,3.4,R,1.3,0,0);bx(4.2,.35,.6,DK,0,3.2,0);bx(3.2,.22,.35,R,0,2.5,0)})}
 function daruma(x,z){sp(.55,R,x,.6,z,1,1.1,1);sp(.3,0xfff6e6,x,.75,z+.42,1,.9,.5);sp(.07,0x222222,x-.12,.82,z+.7);sp(.07,0x222222,x+.12,.82,z+.7)}
@@ -765,7 +828,7 @@ function plane(x,y,z,ry,t){var g=sub(x,y,z,ry,function(){sp(1,WH,0,0,0,3.4,.85,.
 function mach(x,z,ry,c){sub(x,0,z,ry,function(){bx(3.2,3.2,3,c,0,0,0);rf(4.2,1.5,0x4a4a58,0,3.2,0,3.8);bx(2,1.4,.12,0xfbe9c8,0,.8,1.55,0);lan(-1.1,2.2,1.8);lan(1.1,2.2,1.8)})}
 function street(c,n){for(var i=0;i<4;i++){mach(n?4.4:6.2,4-i*3.4,-Math.PI/2,c[i%c.length]);mach(n?-4.4:-6.2,4-i*3.4,Math.PI/2,c[(i+1)%c.length])}}
 function orbit(g,r,y,sp2,ph){AN.push(function(t){var a=t*sp2+(ph||0);g.position.set(Math.cos(a)*r,y,Math.sin(a)*r);g.rotation.y=-(a+Math.PI/2)})}
-function island(){cy(15,1.2,0x8fdc8a,0,-1.2,0);var m=co(14.6,9,0x9a7b5e,0,-10.2,0,24);m.rotation.x=Math.PI;cy(7,.12,0xf3e7cf,0,0,0)}
+function island(){cy(15,1.2,SE().g,0,-1.2,0);var m=co(14.6,9,0x9a7b5e,0,-10.2,0,24);m.rotation.x=Math.PI;cy(7,.12,0xf3e7cf,0,0,0)}
 function decor(id){for(var i=0;i<9;i++){var a=i*.7+id.length;tree(Math.cos(a)*12.4,Math.sin(a)*12.4,i%3?1:0)}}
 function clouds(){var cg=sub(0,0,0,0,function(){NO=1;for(var i=0;i<6;i++){var a=i*1.05;sub(Math.cos(a)*(21+i%2*5),-2+(i*3)%7,Math.sin(a)*(21+i%2*5),0,function(){sp(2,0xffffff,0,0,0,1.4,.8,1);sp(1.6,0xffffff,2,-.2,.2,1.3,.8,1);sp(1.5,0xffffff,-2,-.2,0,1.3,.8,1)})}NO=0});AN.push(function(t){cg.rotation.y=t*.03})}
 function mkMe(){var g=new THREE.Group(),p=G;G=g;cy(.3,.8,0xf3d9bd,-.45,0,0);cy(.3,.8,0xf3d9bd,.45,0,0);cy(.95,1.5,0x2e4a6b,0,.8,0,.7,14);bx(1.3,1.5,.7,0xc96a52,0,1,-.9);sp(.3,0xffe0b8,-1,1.7,.1);sp(.3,0xffe0b8,1,1.7,.1);sp(1.2,0xffe0b8,0,3.2,0);cy(2,.16,0xc96a52,0,3.7,0);cy(1.2,.9,0xb4462f,0,3.8,0,.95,16);sp(.14,0x2b2b2e,-.45,3.2,1.1,1,1.4,.6);sp(.14,0x2b2b2e,.45,3.2,1.1,1,1.4,.6);sp(.24,0xf4a39a,-.8,2.9,.9,1,.6,.4);sp(.24,0xf4a39a,.8,2.9,.9,1,.6,.4);G=p;g.scale.setScalar(.85);return g}
@@ -982,7 +1045,7 @@ function w3Build(){
  wg=new THREE.Group();ws.add(wg);
  ME=mkMe();ME.position.set(0,0,9.5);ws.add(ME);
  var n=70,pa=new Float32Array(n*3);for(var i=0;i<n*3;i+=3){pa[i]=(Math.random()-.5)*40;pa[i+1]=Math.random()*26-2;pa[i+2]=(Math.random()-.5)*40}
- var pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pa,3));wpt=new THREE.Points(pg,new THREE.PointsMaterial({color:0xffb3c6,size:.45}));ws.add(wpt);
+ var pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pa,3));pg.setAttribute('color',new THREE.BufferAttribute(new Float32Array(n*3),3));wpt=new THREE.Points(pg,new THREE.PointsMaterial({vertexColors:true,size:.45}));ws.add(wpt);ptSeason();
  cv.addEventListener('pointerdown',function(e){wps[e.pointerId]=[e.clientX,e.clientY];try{cv.setPointerCapture(e.pointerId)}catch(x){}wtouch=performance.now()+4000});
  cv.addEventListener('pointermove',function(e){var q=wps[e.pointerId];if(!q||wwarp)return;var ks=Object.keys(wps);
   if(ks.length==2){var o=wps[ks[0]==e.pointerId?ks[1]:ks[0]],d0=Math.hypot(q[0]-o[0],q[1]-o[1]),d1=Math.hypot(e.clientX-o[0],e.clientY-o[1]);if(d1>0)wa.d=cl(wa.d*d0/d1,12,80)}
@@ -1015,6 +1078,7 @@ function w3UI(){var h='',ch=$('w3-ch');
   $('w3-card').innerHTML='<p>'+i[1]+'</p><p>💡 '+i[2]+'</p><div class="bt"><button class="ci'+(on?' on':'')+'" data-w="ci">'+(on?'✓ เช็คอินแล้ว · '+V[wid]:'📍 เช็คอินที่นี่')+'</button><a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(i[3]||i[0])+'" target="_blank" rel="noopener">🧭 Google Maps</a><a href="#d'+p[2]+'">📖 แผน Day '+p[2]+'</a><button data-w="prev">‹ ก่อนหน้า</button><button data-w="next">ถัดไป ›</button></div>';
   P.forEach(function(q){h+='<button data-w="go" data-id="'+q[0]+'" class="'+(q[0]==wid?'on':V[q[0]]?'v':'')+'">'+(V[q[0]]?'✓ ':'')+'D'+q[2]+' '+q[1].replace(/^เช็คอิน /,'')+'</button>'})}
  ch.innerHTML=h;var on2=ch.querySelector('.on');if(on2)ch.scrollLeft=on2.offsetLeft-ch.clientWidth/2+on2.clientWidth/2}
+function ptSeason(){var s=SE(),c=wpt.geometry.attributes.color,a=c.array,col=new THREE.Color();for(var i=0;i<a.length;i+=3){col.setHex(s.p[(i/3)%s.p.length]);a[i]=col.r;a[i+1]=col.g;a[i+2]=col.b}c.needsUpdate=true;wpt.material.size=s.s}
 function w3Load(id){
  wg.children.slice().forEach(function(c){wg.remove(c);c.traverse(function(o){if(o.geometry)o.geometry.dispose();if(o.material&&o.material!==OLM){if(o.material.map)o.material.map.dispose();o.material.dispose()}})});
  AN=[];G=wg;NO=0;wing=[];wpul=null;var k;
@@ -1023,7 +1087,7 @@ function w3Load(id){
  wlab=null;labNew(id);$('w3').style.background='linear-gradient(180deg,'+k[0]+','+k[1]+')'}
 function w3Go(id,mode){if(mode)wm=mode;wid=id;w3.classList.toggle('food',wm=='f');ME.visible=wm!='f';
  if(wm=='p'){cur=id;sel=gp(id)[2];render()}
- w3Load(id);w3UI();sndPlay(id);
+ ptSeason();w3Load(id);w3UI();sndPlay(id);
  wtg={a:.7,e:.45,d:D0()};wwarp=performance.now();w3.classList.add('fly');
  var f=$('w3-f');f.className='';void f.offsetWidth;f.className='go';
  if(!wrun){wrun=1;requestAnimationFrame(w3Loop)}}
@@ -1033,7 +1097,7 @@ function w3Loop(now){
  else{if(now>wtouch)wa.a+=.0018;ME.position.y=Math.abs(Math.sin(t*2.4))*.15}
  ME.rotation.y=Math.sin(t*.8)*.25;if(wlab)wlab.position.y=wlab.userData.y+Math.sin(t*1.6)*.35;wing.forEach(function(s,i){if(!s)return;var k=wpul&&wpul.i==i?1+Math.max(0,1-(now-wpul.t)/1100)*.8:1;s.scale.set(4.6*k,1.53*k,1);s.position.y=s.userData.y+Math.sin(t*2+i)*.2});
  AN.forEach(function(f){f(t)});
- var a=wpt.geometry.attributes.position.array;for(var i=0;i<a.length;i+=3){a[i+1]-=.035;a[i]+=Math.sin(t+i)*.01;if(a[i+1]<-4)a[i+1]=24}wpt.geometry.attributes.position.needsUpdate=true;
+ var a=wpt.geometry.attributes.position.array;for(var i=0;i<a.length;i+=3){a[i+1]-=SE().v;a[i]+=Math.sin(t+i)*.01;if(a[i+1]<-4)a[i+1]=24;if(a[i+1]>26)a[i+1]=-4}wpt.geometry.attributes.position.needsUpdate=true;
  var d=wa.d,co2=Math.cos(wa.e);wc.position.set(Math.sin(wa.a)*co2*d,4+Math.sin(wa.e)*d,Math.cos(wa.a)*co2*d);wc.lookAt(0,3.5,0);wr.render(ws,wc)}
 function w3Open(id,mode){
  try{if(!w3)w3Build()}catch(e){if(w3){w3.remove();w3=null}toast('เครื่องนี้เปิด 3D ไม่ได้');if(mode!='f')svOpen(id);return}
@@ -1041,6 +1105,48 @@ function w3Open(id,mode){
 function w3Close(){sndStop();w3.style.display='none';document.body.style.overflow='';wwarp=0;w3.classList.remove('fly')}
 
 render();
+})();
+</script>
+<script>
+(function(){
+var CC=[
+['日本円（JPY）で決済してください。外貨換算（DCC）はしないでください。','Please charge me in Japanese Yen (JPY). No dynamic currency conversion (DCC), please.','ขอจ่ายเป็นเงินเยน (JPY) ค่ะ/ครับ ไม่ต้องแปลงเป็นสกุลเงินอื่น (DCC)'],
+['カードで支払えますか？','Can I pay by card?','จ่ายด้วยบัตรได้ไหมคะ/ครับ?'],
+['VISA／Mastercardは使えますか？','Do you accept Visa / Mastercard?','รับบัตร Visa / Mastercard ไหมคะ/ครับ?'],
+['タッチ決済でお願いします。','Contactless (tap to pay), please.','ขอแตะจ่ายค่ะ/ครับ'],
+['暗証番号（PIN）で支払います。','I will enter my PIN.','ขอกดรหัส PIN ค่ะ/ครับ'],
+['現金とカードを分けて払えますか？','Can I split between cash and card?','แยกจ่ายเงินสดกับบัตรได้ไหมคะ/ครับ?'],
+['レシートをください。','Receipt, please.','ขอใบเสร็จค่ะ/ครับ']
+];
+var $=function(i){return document.getElementById(i)},o,k=0;
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+$('cc-hjp').textContent=CC[0][0];$('cc-hen').textContent=CC[0][1];$('cc-hth').textContent=CC[0][2];
+$('cc-ph').innerHTML=CC.slice(1).map(function(c,i){return '<button data-cc="'+(i+1)+'"><b>'+esc(c[0])+'</b><span>'+esc(c[1])+'</span><em>'+esc(c[2])+'</em></button>'}).join('');
+var pt='';for(var i=0;i<12;i++)pt+='<i style="left:'+(Math.random()*100)+'%;animation-duration:'+(6+Math.random()*6)+'s;animation-delay:-'+(Math.random()*10)+'s"></i>';$('cc-pt').innerHTML=pt;
+function show(n){k=(n+CC.length)%CC.length;$('cc-jp').textContent=CC[k][0];$('cc-en').textContent=CC[k][1];$('cc-th').textContent=CC[k][2];$('cc-n').textContent=(k+1)+' / '+CC.length}
+function open(n){if(!o){o=document.createElement('div');o.id='cc-full';o.innerHTML='<button class="cc-x" data-c="x" aria-label="ปิด">✕</button><div class="cc-n" id="cc-n"></div><div class="cc-box"><div class="cc-jp" id="cc-jp"></div><div class="cc-en" id="cc-en"></div><div class="cc-th" id="cc-th"></div></div><div class="cc-nav"><button data-c="p" aria-label="ก่อนหน้า">‹</button><button data-c="n" aria-label="ถัดไป">›</button></div><div class="cc-me2">'+$('cc-me').innerHTML+'</div>';document.body.appendChild(o);
+ o.addEventListener('click',function(e){var b=e.target.closest('[data-c]');if(!b)return;var c=b.dataset.c;if(c=='x')close();else show(k+(c=='n'?1:-1))})}
+ show(n);o.classList.add('show');document.body.style.overflow='hidden'}
+function close(){if(o){o.classList.remove('show');document.body.style.overflow=''}}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-cc]');if(b)open(+b.dataset.cc)});
+document.addEventListener('keydown',function(e){if(o&&o.classList.contains('show')){if(e.key=='Escape')close();else if(e.key=='ArrowRight')show(k+1);else if(e.key=='ArrowLeft')show(k-1)}});
+})();
+</script>
+<script>
+(function(){
+var D={
+spring:{a:0xffb7c5,b:0xffc9d4,g:0x9fe08e,p:[0xffb3c6,0xffd1dc,0xff9fb8],v:.035,s:.45,pc:['#ffb3c6','#ffd1dc','#ff9fb8'],cnt:24,sz:[8,15],t:[9,16]},
+summer:{a:0x3fbf5a,b:0x6fd678,g:0x62c46b,p:[0xfff3a0,0xffffff],v:-.02,s:.35,pc:['#fff'],cnt:18,sz:[8,22],t:[8,14]},
+autumn:{a:0xe0541a,b:0xffa21c,g:0xcf8a3a,p:[0xe0301e,0xff7a1a,0xffb81c,0xc2182b,0xf2d21b],v:.05,s:.6,pc:['#e0301e','#ff7a1a','#ffb81c','#c2182b','#f2d21b'],cnt:22,sz:[12,26],t:[8,16]},
+winter:{a:0xf4f8fc,b:0xdbe9f5,g:0xf2f6fa,p:[0xffffff,0xe6f1fb],v:.025,s:.4,pc:['#fff'],cnt:40,sz:[3,8],t:[7,14]}
+},cur='autumn';
+try{var s0=localStorage.getItem('osaka_season');if(D[s0])cur=s0}catch(e){}
+function rain(){var c=document.querySelector('.cover');if(!c)return;var r=c.querySelector('.leafrain');if(!r){r=document.createElement('div');r.className='leafrain';c.insertBefore(r,c.firstChild)}
+ var d=D[cur],h='';for(var i=0;i<d.cnt;i++){var z=d.sz[0]+Math.random()*(d.sz[1]-d.sz[0]);h+='<i class="lf" style="left:'+(Math.random()*100)+'%;--c:'+d.pc[i%d.pc.length]+';width:'+z+'px;height:'+z+'px;animation-duration:'+(d.t[0]+Math.random()*(d.t[1]-d.t[0]))+'s;animation-delay:-'+(Math.random()*14)+'s"></i>'}r.innerHTML=h}
+function set(s){cur=s;document.documentElement.setAttribute('data-season',s);window.SEAS=D[s];try{localStorage.setItem('osaka_season',s)}catch(e){}
+ [].forEach.call(document.querySelectorAll('#seasons button'),function(b){b.classList.toggle('on',b.dataset.s==s)});rain()}
+document.getElementById('seasons').addEventListener('click',function(e){var b=e.target.closest('[data-s]');if(b)set(b.dataset.s)});
+set(cur);
 })();
 </script>
 </body></html>
